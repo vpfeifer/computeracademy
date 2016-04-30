@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1">
+		<title>Computer Academy</title>
+		<link rel="icon" href="../favicon.png" type="image/png">
+		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/style.css" rel="stylesheet" type="text/css"> 
+		<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+		<link href="../css/animate.css" rel="stylesheet" type="text/css">
+		<link href="../css/indexacao.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo">
+        <span class="logo-title">Indexação</span>
+      </div>
+	  <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	    <div id="main-nav" class="collapse navbar-collapse navStyle">
+			<ul class="nav navbar-nav" id="mainNav">
+			  <li class="active"><a href="#intro" class="scroll-link">Intro</a></li>
+			  <li><a href="#chaves" class="scroll-link">Por Chaves</a></li>
+			  <li><a href="#listaInvertida" class="scroll-link">Lista Invertida</a></li>
+			  <li><a href="#arvores" class="scroll-link">Árvores</a></li>
+			  <li><a href="#hashing" class="scroll-link">Hashing</a></li>
+			</ul>
+      </div>
+	 </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section--> 
+
+		<!-- Intro -->
+		<section id="intro">
+			<div class="paddingTop"></div>
+		  	<div class="container">
+		  		<div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+		    		<p>Para entender indexação, podemos fazer uma analogia ao livro e seu sumário. No sumário temos o tema do capítulo e a página onde se encontra o conteúdo. No contexto de estrutura de dados, chamamos isso de <strong>índice</strong>, temos uma chave e localização do conteúdo.</p>
+		    		<br/>
+		    		<p>Em computação, geralmente, <strong>índices</strong> são estruturas de acesso auxiliares utilizadas na otimização da recuperação de registros, ou seja, queremos buscar dados de maneira mais rápida e eficiente. Para atingir esse objetivo, existe uma variedade de técnicas baseadas em índices, cada qual com sua estrutura de dados particular.</p>
+		    		<br/>
+		    		<p>O objetivo desse módulo é introduzir algumas dessas técnicas como indexação por chaves, listas ivertidas, árvores e hashing. Esperamos que aproveite o contéudo e bons estudos!</p>	
+		  		</div>
+		  		<div class="col-lg-4 col-md-4 col-sm-4 pull-right">
+		  			<div class="shape">
+		  				<strong>Sumário</strong>
+		  				<ol>
+		  					<li>Indexação por Chaves ........ pg 8</li>
+		  					<li>Lista Invertida ...................... pg 16</li>
+		  					<li>Árvores ................................. pg 32</li>
+		  					<li>Hashing ................................. pg 64</li>
+		  				</ol>
+		  			</div>
+		  		</div>
+			</div>
+			<div class="background"></div>
+		</section>
+		<!--/ Intro -->
+
+		<!-- Chaves -->
+
+		<section id="chaves">
+			<div class="top-chaves">
+			<div>
+				<h2>Indexação por chaves</h2>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 pull-right">
+				<p>O uso de <strong>índices</strong> (ou indexação) pode ser uma
+				alternativa à ordenação quando precisamos
+				organizar um arquivo para ser pesquisado por
+				chaves.</p>
+				<br/>
+				<p>Um índice sempre aparece nas páginas finais
+				de um livro, na forma de uma tabela com
+				uma lista de tópicos (chaves) e os números
+				de páginas nas quais os tópicos podem ser
+				encontrados (campos de referência). No livro,
+				o índice fornece uma maneira de localizar um
+				tópico <strong>rapidamente</strong>.</p>
+				<br/>
+				<p>Todos os índices são baseados nos mesmos
+				conceitos básicos: <strong>chaves</strong> e <strong>campos de
+				referência</strong>.</p>
+				<br/>
+				<p>Especificamente para arquivos, as <strong>vantagens</strong> de utilizar
+				índices, são :</p>
+				<ul>
+					<li>Permitir impor uma <strong>ordem</strong> no arquivo sem rearranjá-lo.</li>
+					<li>Possibilitar <strong>múltiplas visões</strong> do arquivo criando mais de um índice.</li>
+					<li>Fonecer <strong>acesso rápido</strong> a arquivos com registros de tamanho variável.</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 pull-left">
+				<img src="../img/bollogs_indice.jpg">
+			</div>
+		</section>
+
+		<!-- /Chaves -->
+
+		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+		<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+		<script type="text/javascript" src="../js/wow.js"></script> 
+	</body>
+</html>

@@ -1,0 +1,42 @@
+#header_wrapper{
+  background: #ccc;
+}
+
+p{
+	font-family: Open Sans
+	font-size : 16px;
+	color: #333;
+}
+
+strong {
+	font-size: 18px;
+}
+
+a.read-more-armazenamento {
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    font-size: 16px;
+    width: 178px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    background: #ccc;
+    color: #333;
+    border: 1px solid #aaa;
+}
+
+a.read-more-armazenamento:hover {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.hero_section{
+  padding-top: 100px;
+}

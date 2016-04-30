@@ -224,7 +224,7 @@ p {
 
 .hero_section {
     position: relative;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .white_pad {
@@ -285,9 +285,9 @@ a.read_more2 {
     transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-    background: transparent;
-    color: #333;
-    border: 1px solid #333;
+    background: #00AFEF;
+    color: #fff;
+    border: 1px solid #00DFEF;
 }
 
 a.read_more2:hover {
@@ -392,7 +392,7 @@ a.read_more2:hover {
 }
 
 .inner_section {
-    padding: 120px 0 20px;
+    padding: 60px 0 20px;
 }
 
 .page_section.alabaster {

@@ -9,7 +9,15 @@ div.background
     margin-top: 30px;
     position: relative;
 }
-
+div.background-color{
+	
+	
+    background-color: #FFFFE0;
+    
+    
+    
+	
+}
 .paddingTop{
 	padding-top: 30px;
 }

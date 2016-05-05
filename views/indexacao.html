@@ -29,6 +29,7 @@
 			  <li><a href="#listaInvertida" class="scroll-link">Lista Invertida</a></li>
 			  <li><a href="#arvores" class="scroll-link">Árvores</a></li>
 			  <li><a href="#hashing" class="scroll-link">Hashing</a></li>
+			  <li><a href="../index.html#modulos">Voltar para Academia</a></li>
 			</ul>
       </div>
 	 </nav>
@@ -36,7 +37,7 @@
   </div>
 </header>
 <!--Header_section--> 
-
+<div class="background-color">
 		<!-- Intro -->
 		<section id="intro">
 			<div class="paddingTop"></div>
@@ -71,7 +72,7 @@
 			<div>
 				<h2>Indexação por chaves</h2>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 pull-right">
+			<div class="col-lg-6 col-md-6 col-sm-6 pull-right" >
 				<p>O uso de <strong>índices</strong> (ou indexação) pode ser uma
 				alternativa à ordenação quando precisamos
 				organizar um arquivo para ser pesquisado por
@@ -97,24 +98,23 @@
 					<li>Fonecer <strong>acesso rápido</strong> a arquivos com registros de tamanho variável.</li>
 				</ul>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 pull-left">
+			<div class="col-lg-4 col-md-4 col-sm-4 pull-left" style="margin-left: 100px;">
 				<img src="../img/bollogs_indice.jpg">
 			</div>
 		</section>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<!-- /Arvores -->
 		<section id="arvores">
 		  <div class="top-arvores">
 			<div>
 				<h2>Árvores B e Generalizações</h2>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 pull-left">
+			<div class="col-lg-4 col-md-6 col-sm-6 pull-left" style="margin-left: 100px;">
 					<img src="../img/tirinha273.jpg"></div>
-			<div class="container">
-				<div class="col-lg-6 col-md-6 col-sm-6 pull-right">
-				<div class="col-lg-4 col-md-4 col-sm-4 pull-left">
-					<img src="../img/arvore.jpg"></div>
+			<div class="container" align="justify" style="margin-left: 100px;">
+				
+					
 					<p>	Uma rápida pesquisa sobre Árvores B no Google nos retorna o seguinte resultado:</p><br>
 						<p>Se analisarmos as árvores B,<strong> elas são uma generalização das árvores binária de busca </strong>, pois cada nó de uma árvore binária armazena uma única chave de busca, enquanto <strong>as árvores B armazenam um número maior do que um de chaves de busca em cada nó</strong>, ou no termo mais usual para essa árvore, em cada página.</p>
 						<br>
@@ -122,24 +122,34 @@
 					<p>Em uma árvore-B, uma página, ou um nó,consiste de uma seqüência ordenada de chaves e um conjunto de ponteiros</p>
 					<br>
 					<p>Chamamos de <strong>ORDEM</strong> o número máximo de ponteiros que podem ser armazenados numa árvore-B. O número máximo de ponteiros é igual ao número máximo de descedentes em um nó. A árvore cresce de cima para baixo e ao chegar ao limite do número de descendentes ocorre o que chamamos de <u>divisão e promoção</u>. Uma árvore de ordem N, armazena N-1 chaves.
-					<br><br>
+					<br><br><br><br><br>
 					
-					<p> <a href="http://ats.oka.nu/b-tree/b-tree.manual.html">Acesse este site</a> e adicione valores para a árvore. Vejam como ela se comporta
-					e como funciona a divisão e promoção. O que você pode afirmar sobre isso? <br>
-					<p> No video abaixo vamos entender como funciona a inserção em Árvores-B. Nele é possível ver como funciona a divisão e promoção.
-					Veja como funciona o algoritmo!
-					<br><br>
+						<p> <a href="http://ats.oka.nu/b-tree/b-tree.manual.html">Acesse este site</a> e adicione valores para a árvore. Vejam como ela se comporta
+						e como funciona a divisão e promoção. O que você pode afirmar sobre isso? <br>
+						<p> No video abaixo vamos entender como funciona a inserção em Árvores-B. Nele é possível ver como funciona a divisão e promoção.
+						Veja como funciona o algoritmo!
 					
+					<br><br>
+										
 					<iframe width="420" height="315" src="https://www.youtube.com/embed/dBPJAM0Glls" frameborder="0" allowfullscreen></iframe>
 					<br><br>
 					<p> Na Remoção temos a <u>redistribuição</u> e <u>concatenação</u>. Veja como elas funcionam no vídeo abaixo:
 					<br><br>
 					<iframe width="420" height="315" src="https://www.youtube.com/embed/XxFzd8s2u60" frameborder="0" allowfullscreen></iframe>
 					<br><br><br>
-					</div>
+					<p> Para adicionarmos ou removermos valores numa árvore binária, é necessária uma busca.</p> 
+					<p>Para isso, usamos a Árvore Binária de Busca,
+					muito bem explicada no video a seguir.</p>
+					<br><br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/M7cb4HjePJk" frameborder="0" allowfullscreen></iframe>
+					<br><br><br><p>
+					E agora, vamos por a mão na massa e ver como essa árvore funciona? </p>
+					<p>A animação abaixo é do site http://visualgo.net/ e você pode vê-la no modo de exploração ou tutorial.</p>
+					<p>Você pode inserir dados na árvore e ao mesmo tempo ver como o código foi escrito!</p>
+					<br><br><br>
+					 <iframe width="1049" height="600" src="http://visualgo.net/bst" allowfullscreen></iframe> 
 				</div>
-			
-			</div>
+				</div>
 		</section>
 		
 

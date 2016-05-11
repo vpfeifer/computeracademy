@@ -40,3 +40,20 @@ a.read-more-armazenamento:hover {
 .hero_section{
   padding-top: 100px;
 }
+
+.item_overlay:hover {
+    background: rgba(211, 211, 211, 0.7);
+}
+
+.project_name{
+   color: #444;
+   font-weight: bold;
+}
+
+.modal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}

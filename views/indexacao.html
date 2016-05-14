@@ -176,9 +176,161 @@
 				</p><br><br>
 				<img src="../img/listas.jpg" align="center"></div>
 			</div>
-			</div>
+			
 		</section>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<!-- /Hashing -->
+		<section id="hashing">
+		  <div class="top-arvores">
+			<div>
+				<h2>Hashing (Espalhamento)</h2>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 pull-left" style="margin-left: 100px;">
+					<img src="../img/hashing.png"></div>
+			<div class="container" align="justify" style="margin-left: 100px;">
+				
+					
+					<p>	<b><h4>O conceito geral de uma tabela de espalhamento ou tabela hashing é o de que:</h4></b></p>
+						<i>Em ciência da computação a tabela hash (de hashing, no inglês), também conhecida por tabela de espalhamento, é uma estrutura de dados especial, que associa chaves de pesquisa (hash) a valores. Seu objetivo é, a partir de uma chave simples, fazer uma busca rápida e obter o valor desejado.</i> - <b>WikiLivros Algoritmoa e estruturas de dados</b>
+						<br><br>
+						
+	
+						
+					   <h3>Função de Espalhamento</h3>
+					<p>Para a maximização do desempenho de uma tabela hashing espera-se idealmente que não hajam colisões, ou seja, que cada valor atribuido leve a uma posição única na cadeia.
+					Atribui-se portanto essa tarefa a uma função de espalhamento toda tabela de hashing é portanto gerada por uma função de espalhamento.</p>
+					<p>Essa função funciona da seguinte forma h(k) transforma uma chave k em um endereço, este endereço é usado como base para o armazenamento e recuperação de registros, isso é similar a uma indexação, pois associa a chave ao endereço relativo do registro.</p>
+						 
+					<br>
+					<p>Existem diversos métodos para a implementação da função de espalhamento abaixo explicitamos os dois mais populares:</p><br>
+					
+					<h4><b>Método da Divisão</b></h4>
+					
+					<p>Nesse método a chave K é dividida pela dimensão da tabela M, o resto da divisão é então considerado o endereço, estando sempre no intervalo entre 0 e M-1.
+					De maneira geral acaba-se por substituir M pelo número pelo primeiro numero primo que o sucede, desde que este seja não muito próximo de potências de 2. Por exemplo:</p><br>
+                    
+					<p>Desejamos alocar 1000 cadeias de 8 bits e podemos ter listas de tamanho 4</p><br>
+					<p><b>Temos então que M = 1000/250 = 4 </b></p><br>
+					Porém desejamos encontrar o primeiro número primo <b>maior que 250</b> <br><br>
+					
+					
+				    <center><img src="../img/primos.png"></center> <br><br>
+			        
+					
+					<b> Consultando a tabela de números primos teremos que <strong>M=251</strong></b></p><br>
+
+
+
+					O motivo para isso não é muito óbvio e uma boa discussão sobre pode ser encontrada <a href="http://stackoverflow.com/questions/1145217/why-should-hash-functionsuse-a-prime-number-modulus"> neste link</a>.</p>
+					
+					<h4><b>Método Quadrado</b></h4>
+				    <p>Esse método foi inventado por <super>John von Neumann</super>
+					<p>A chave é elevada ao quadrado e então é tirado seu modulo com M.</p><br>
+					<p>Exemplo: chave 312</p>
+								<p>312<SUP>2</Sup> = 97344</p>
+					<p>Considerando M igual a 100</p>
+                     <p>97344 mod 100 = 44</p>
+					 <p>A chave 312 foi então inserida na posição 44 da tabela de hash</p><br><b>
+
+
+					
+                       
+					
+					<table width="600" cellspacing="1" cellpadding="3" border="0" bgcolor="#165480"> 
+					<tr> 
+					<td bgcolor="#ffffcc"> 
+					<font face="helvetica, helvetica, helvetica" size=3> 
+					<i><p>unsigned int const k = 10; // M==1024</p>
+					   <p>unsigned int const w = bitsizeof(unsigned int);</p>
+					   <p>unsigned int h(unsigned int x) {</p>
+					   <p>return (x * x) >> (w - k);</p>
+					   <p>} </p>
+					</i>
+					</font> 
+					</td> 
+					</tr> 
+					</table> 
+						
+					
+					
+					
+					<br><br><br><p>
+					 <p><b>Bom, você ainda pode estar um pouco confuso, então tá na hora de por a mão na massa e testar né?</b> </p>
+					<p>O simulador abaixo é pertencente ao docente <b>Donald Alan Retzlaff</b> do College of Saint Elizabeth e está vinculado a <a href="http://www.cse.unt.edu/~donr/courses/2050/HashSimulator/hashsim.cgi">esta página</a>, através dele você pode ver o processo de organização de tabelas hashing selecionando o método para posicionamento (hashing)</p>
+					<p>Você pode inserir dados na hashing e ver como a tabela se organiza simultaneamente</p>
+					<br><br><br>
+					<IFRAME src="http://www.cse.unt.edu/~donr/courses/2050/HashSimulator" width="1000" height="600" scrolling="no" frameborder="0" align="center"></IFRAME> 
+					 <br><br>
+					 <p><b>Além disso é possível selecionar um método e depois clicando "View Description" ser levado a explicação de como ele funciona</b> </p><br><br>
+					
+                     
+					 
+					 
+ <p><b>Caso ainda hajam dúvidas sobre o funcionamento da hashing, abaixo disponibilizamos uma sequencia de 10 vídeo aulas bem curtinhas do canal Linguagem C Programação Descomplicada que explicam passo a passo como funciona</b> </p>
+
+
+
+
+
+<article class="accordion">
+    <center>
+	<section id="acc1">
+		<h2><a href="#acc1">Definição</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/njkANXEMHTY" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc2">
+		<h2><a href="#acc2">Implementação</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/K40yG9bmVZ4" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc3">
+		<h2><a href="#acc3">Criando e Destruindo a Tabela</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/X55Ku_Mpw5g" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc4">
+		<h2><a href="#acc4">Função de Hashing</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/o0TXB3QPOWY" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc5">
+		<h2><a href="#acc5">Inserção e Busca (Sem tratamento)</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/sYKarxRQ_-g" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+		<section id="acc6">
+		<h2><a href="#acc6">Hashing Universal</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/-3ZTWubURdc" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc7">
+		<h2><a href="#acc7">Hashing Perfeito e Imperfeito</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/KsWzI1z0z9o" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc8">
+		<h2><a href="#acc8">Tratamento de colisão</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/wBReEzdR7So" frameborder="0" allowfullscreen></iframe></p>
+	</section>
+	
+	<section id="acc9">
+		<h2><a href="#acc9">Tratamento de colisão (Endereçamento)</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/BDYiADxBqXA" frameborder="0" allowfullscreen></iframe></p>
 		
+	</section>
+     
+	<section id="acc0">
+		<h2><a href="#acc0">Inserção e Busca (Com Tratamento)</a></h2>
+		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Dhbgy2q0h4w" frameborder="0" allowfullscreen></iframe></p>
+		</center>
+	</section> 
+</article>
+
+
+
+		</section>
+		<!-- /Hashing -->
 
 		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>

@@ -5,8 +5,8 @@
 		<title>Computer Academy</title>
 		<link rel="icon" href="../favicon.png" type="image/png">
 		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-		<link href="../css/style.css" rel="stylesheet" type="text/css"> 
-		<link href="../css/font-awesome.css" rel="stylesheet" type="text/css"> 
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
 		<link href="../css/animate.css" rel="stylesheet" type="text/css">
 		<link href="../css/indexacao.css" rel="stylesheet" type="text/css">
 	</head>
@@ -36,312 +36,381 @@
     </div>
   </div>
 </header>
-<!--Header_section--> 
-<div class="background-color">
+<!--Header_section-->
 		<!-- Intro -->
 		<section id="intro">
-			<div class="paddingTop"></div>
-		  	<div class="container">
-		  		<div class="col-lg-6 col-md-6 col-sm-6 pull-left">
-		    		<p>Para entender indexação, podemos fazer uma analogia ao livro e seu sumário. No sumário temos o tema do capítulo e a página onde se encontra o conteúdo. No contexto de estrutura de dados, chamamos isso de <strong>índice</strong>, temos uma chave e localização do conteúdo.</p>
-		    		<br/>
-		    		<p>Em computação, geralmente, <strong>índices</strong> são estruturas de acesso auxiliares utilizadas na otimização da recuperação de registros, ou seja, queremos buscar dados de maneira mais rápida e eficiente. Para atingir esse objetivo, existe uma variedade de técnicas baseadas em índices, cada qual com sua estrutura de dados particular.</p>
-		    		<br/>
-		    		<p>O objetivo desse módulo é introduzir algumas dessas técnicas como indexação por chaves, listas ivertidas, árvores e hashing. Esperamos que aproveite o contéudo e bons estudos!</p>	
-		  		</div>
-		  		<div class="col-lg-4 col-md-4 col-sm-4 pull-right">
-		  			<div class="shape">
-		  				<strong>Sumário</strong>
-		  				<ol>
-		  					<li>Indexação por Chaves ........ pg 8</li>
-		  					<li>Lista Invertida ...................... pg 16</li>
-		  					<li>Árvores ................................. pg 32</li>
-		  					<li>Hashing ................................. pg 64</li>
-		  				</ol>
-		  			</div>
-		  		</div>
+		  	<div class="container top">
+			  		<div class="col-lg-8 col-md-8 col-sm-12">
+			    		<p>Para entender indexação, podemos fazer uma analogia ao livro e seu sumário.
+								No sumário temos o tema do capítulo e a página onde se encontra o conteúdo.
+								No contexto de estrutura de dados, chamamos isso de <strong>índice</strong>,
+								temos uma chave e localização do conteúdo.</p>
+			    		<br/>
+			    		<p>Em computação, geralmente, <strong>índices</strong> são estruturas de acesso
+								 auxiliares utilizadas na otimização da recuperação de registros, ou seja,
+								 queremos buscar dados de maneira mais rápida e eficiente. Para atingir esse objetivo,
+								 existe uma variedade de técnicas baseadas em índices, cada qual com sua estrutura de dados particular.</p>
+			    		<br/>
+			    		<p>O objetivo desse módulo é introduzir algumas dessas técnicas como indexação por chaves, listas ivertidas, árvores e hashing. Esperamos que aproveite o contéudo e bons estudos!</p>
+			  		</div>
+			  		<div class="col-lg-4 col-md-4 col-sm-12">
+			  			<div class="shape">
+			  				<strong>Sumário</strong>
+			  				<ol>
+			  					<li>Indexação por Chaves ........ pg 8</li>
+			  					<li>Lista Invertida ...................... pg 16</li>
+			  					<li>Árvores ................................. pg 32</li>
+			  					<li>Hashing ................................. pg 64</li>
+			  				</ol>
+			  			</div>
+			  		</div>
 			</div>
 			<div class="background"></div>
 		</section>
 		<!--/ Intro -->
-
 		<!-- Chaves -->
-
 		<section id="chaves">
-			<div class="top-chaves">
-			<div>
-				<h2>Indexação por chaves</h2>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 pull-right" >
-				<p>O uso de <strong>índices</strong> (ou indexação) pode ser uma
-				alternativa à ordenação quando precisamos
-				organizar um arquivo para ser pesquisado por
-				chaves.</p>
-				<br/>
-				<p>Um índice sempre aparece nas páginas finais
-				de um livro, na forma de uma tabela com
-				uma lista de tópicos (chaves) e os números
-				de páginas nas quais os tópicos podem ser
-				encontrados (campos de referência). No livro,
-				o índice fornece uma maneira de localizar um
-				tópico <strong>rapidamente</strong>.</p>
-				<br/>
-				<p>Todos os índices são baseados nos mesmos
-				conceitos básicos: <strong>chaves</strong> e <strong>campos de
-				referência</strong>.</p>
-				<br/>
-				<p>Especificamente para arquivos, as <strong>vantagens</strong> de utilizar
-				índices, são :</p>
-				<ul>
-					<li>Permitir impor uma <strong>ordem</strong> no arquivo sem rearranjá-lo.</li>
-					<li>Possibilitar <strong>múltiplas visões</strong> do arquivo criando mais de um índice.</li>
-					<li>Fonecer <strong>acesso rápido</strong> a arquivos com registros de tamanho variável.</li>
-				</ul>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 pull-left" style="margin-left: 100px;">
-				<img src="../img/bollogs_indice.jpg">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/><br/>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Indexação por chaves</h2>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-12">
+					<img src="../img/bollogs_indice.jpg">
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<p>O uso de <strong>índices</strong> (ou indexação) pode ser uma
+					alternativa à ordenação quando precisamos
+					organizar um arquivo para ser pesquisado por
+					chaves.</p>
+					<br/>
+					<p>Um índice sempre aparece nas páginas finais
+					de um livro, na forma de uma tabela com
+					uma lista de tópicos (chaves) e os números
+					de páginas nas quais os tópicos podem ser
+					encontrados (campos de referência). No livro,
+					o índice fornece uma maneira de localizar um
+					tópico <strong>rapidamente</strong>.</p>
+					<br/>
+					<p>Todos os índices são baseados nos mesmos
+					conceitos básicos: <strong>chaves</strong> e <strong>campos de
+					referência</strong>.</p>
+					<br/>
+					<p>Especificamente para arquivos, as <strong>vantagens</strong> de utilizar
+					índices, são :</p>
+					<ul>
+						<li>Permitir impor uma <strong>ordem</strong> no arquivo sem rearranjá-lo.</li>
+						<li>Possibilitar <strong>múltiplas visões</strong> do arquivo criando mais de um índice.</li>
+						<li>Fonecer <strong>acesso rápido</strong> a arquivos com registros de tamanho variável.</li>
+					</ul>
+				</div>
 			</div>
 		</section>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<!-- /Arvores -->
-		<section id="arvores">
-		  <div class="top-arvores">
-			<div>
-				<h2>Árvores B e Generalizações</h2>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-6 pull-left" style="margin-left: 100px;">
-					<img src="../img/tirinha273.jpg"></div>
-			<div class="container" align="justify" style="margin-left: 100px;">
-				
-					
-					<p>	Uma rápida pesquisa sobre Árvores B no Google nos retorna o seguinte resultado (de acordo com a Wikipedia :D):</p><br>
-						<p>Se analisarmos as árvores B,<strong> elas são uma generalização das árvores binária de busca </strong>, pois cada nó de uma árvore binária armazena uma única chave de busca, enquanto <strong>as árvores B armazenam um número maior do que um de chaves de busca em cada nó</strong>, ou no termo mais usual para essa árvore, em cada página.</p>
-						<br>
-					
-					<p>Em uma árvore-B, uma página, ou um nó,consiste de uma seqüência ordenada de chaves e um conjunto de ponteiros</p>
-					<br>
-					<p>Chamamos de <strong>ORDEM</strong> o número máximo de ponteiros que podem ser armazenados numa árvore-B. O número máximo de ponteiros é igual ao número máximo de descedentes em um nó. A árvore cresce de cima para baixo e ao chegar ao limite do número de descendentes ocorre o que chamamos de <u>divisão e promoção</u>. Uma árvore de ordem N, armazena N-1 chaves.
-					<br><br><br><br><br>
-					
-						<p> <a href="http://ats.oka.nu/b-tree/b-tree.manual.html">Acesse este site</a> e adicione valores para a árvore. Vejam como ela se comporta
-						e como funciona a divisão e promoção. O que você pode afirmar sobre isso? <br>
-						<p> No video abaixo vamos entender como funciona a inserção em Árvores-B. Nele é possível ver como funciona a divisão e promoção.
-						Veja como funciona o algoritmo!
-					
-					<br><br>
-										
-					<iframe width="420" height="315" src="https://www.youtube.com/embed/dBPJAM0Glls" frameborder="0" allowfullscreen></iframe>
-					<br><br>
-					<p> Na Remoção temos a <u>redistribuição</u> e <u>concatenação</u>. Veja como elas funcionam no vídeo abaixo:
-					<br><br>
-					<iframe width="420" height="315" src="https://www.youtube.com/embed/XxFzd8s2u60" frameborder="0" allowfullscreen></iframe>
-					<br><br><br>
-					<p> Para adicionarmos ou removermos valores numa árvore binária, é necessária uma busca.</p> 
-					<p>Para isso, usamos a Árvore Binária de Busca,
-					muito bem explicada no video a seguir.</p>
-					<br><br>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/M7cb4HjePJk" frameborder="0" allowfullscreen></iframe>
-					<br><br><br><p>
-					E agora, vamos por a mão na massa e ver como essa árvore funciona? </p>
-					<p>A animação abaixo é do site http://visualgo.net/ e você pode vê-la no modo de exploração ou tutorial.</p>
-					<p>Você pode inserir dados na árvore e ao mesmo tempo ver como o código foi escrito!</p>
-					<br><br><br>
-					 <iframe width="1049" height="600" src="http://visualgo.net/bst" allowfullscreen></iframe> 
-				</div>
-				</div>
-		</section>
-		<!-- /Arvores -->
-		<br><br><br><br><br><br>	
+		<!-- /Chaves -->
 		<!-- /Lista Invertida -->
 		<section id="listaInvertida">
-		  <div class="top-lista">
-			<div class="container" align="justify" style="margin-left: 100px;">
-				<h2>Lista Invertida</h2>
-				<b>Definição:</b>
-				<ul><p>
-				<li> 1. De acordo com a Wikipedia:<br> Em ciência da computação, Lista Invertida (do inglês inverted list ou inverted index) é uma estrutura de dados que mapeia termos às suas ocorrências em um documento ou conjunto de documentos, armazenados em um banco de dados.
-				</ul></p>
-				<br>
-				<p>Mas o que isso significa? <br>
-				Vamos pensar num sistema que guarda o nome de várias pessoas e outros dados como endereço e telefone.<br>
-				Vamos supor que precisamos acessar estes nomes com frequência e que em determinado momento precisamos retornar todas<br>
-				as pessoas cujo nome é Maria. <u>Como fazer isso sem pesquisar uma arquivo inteiro realizando vários seeks?</u><br>
-				A solução pode ser realizada usando uma <strong>lista invertida</strong>. <br><br>
-				Podemos fazer um arquivo com Nomes e seus RRNs respectivos.<br>
-				Em outro arquivo faremos uma lista contendo a chave primária para este nome e um RRN para a próxima chave que o contém.<br>
-				Para ilustrar isso, vamos usar este exemplo, disponível <a href="http://wiki.icmc.usp.br/images/6/62/SCC0215012014outrosIndicesParte04.pdf">AQUI</a><br>
-				Aliás, recomendamos a leitura destes slides para uma compreensão melhor do assunto! <br>	
-				Nele você vai encontrar vantagens, desvantagens e outros tópicos importantes.
-				</p><br><br>
-				<img src="../img/listas.jpg" align="center"></div>
-			</div>
-			
-<<<<<<< HEAD
-		</section>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<!-- /Hashing -->
-		<section id="hashing">
-		  <div class="top-hashing">
-			<div>
-				<h2>Hashing (Espalhamento)</h2>
-			</div>
-			<div class="col-lg-3 col-md-6 col-sm-6 pull-left" style="margin-left: 100px;">
-					<img src="../img/hashing.png"></div>
-			<div class="container" align="justify" style="margin-left: 100px;">
-				
-					
-					<p>	<b><h4>O conceito geral de uma tabela de espalhamento ou tabela hashing é o de que:</h4></b></p>
-						<i>Em ciência da computação a tabela hash (de hashing, no inglês), também conhecida por tabela de espalhamento, é uma estrutura de dados especial, que associa chaves de pesquisa (hash) a valores. Seu objetivo é, a partir de uma chave simples, fazer uma busca rápida e obter o valor desejado.</i> - <b>WikiLivros Algoritmoa e estruturas de dados</b>
-						<br><br>
-						
-	
-						
-					   <h3>Função de Espalhamento</h3>
-					<p>Para a maximização do desempenho de uma tabela hashing espera-se idealmente que não hajam colisões, ou seja, que cada valor atribuido leve a uma posição única na cadeia.
-					Atribui-se portanto essa tarefa a uma função de espalhamento toda tabela de hashing é portanto gerada por uma função de espalhamento.</p>
-					<p>Essa função funciona da seguinte forma h(k) transforma uma chave k em um endereço, este endereço é usado como base para o armazenamento e recuperação de registros, isso é similar a uma indexação, pois associa a chave ao endereço relativo do registro.</p>
-						 
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12 top">
+					<h2>Lista Invertida</h2>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/><br/><br/><br/>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<p>De acordo com a Wikipedia, em ciência da computação, <strong>Lista Invertida</strong> (do inglês inverted list ou inverted index)
+						é uma <strong>estrutura de dados</strong> que mapeia termos às suas ocorrências em um documento ou conjunto de documentos,
+						armazenados em um banco de dados.</p>
 					<br>
-					<p>Existem diversos métodos para a implementação da função de espalhamento abaixo explicitamos os dois mais populares:</p><br>
-					
-					<h4><b>Método da Divisão</b></h4>
-					
-					<p>Nesse método a chave K é dividida pela dimensão da tabela M, o resto da divisão é então considerado o endereço, estando sempre no intervalo entre 0 e M-1.
-					De maneira geral acaba-se por substituir M pelo número pelo primeiro numero primo que o sucede, desde que este seja não muito próximo de potências de 2. Por exemplo:</p><br>
-                    
-					<p>Desejamos alocar 1000 cadeias de 8 bits e podemos ter listas de tamanho 4</p><br>
-					<p><b>Temos então que M = 1000/250 = 4 </b></p><br>
-					Porém desejamos encontrar o primeiro número primo <b>maior que 250</b> <br><br>
-					
-					
-				    <center><img src="../img/primos.png"></center> <br><br>
-			        
-					
-					<b> Consultando a tabela de números primos teremos que <strong>M=251</strong></b></p><br>
-
-
-
-					O motivo para isso não é muito óbvio e uma boa discussão sobre pode ser encontrada <a href="http://stackoverflow.com/questions/1145217/why-should-hash-functionsuse-a-prime-number-modulus"> neste link</a>.</p>
-					
-					<h4><b>Método Quadrado</b></h4>
-				    <p>Esse método foi inventado por <super>John von Neumann</super>
-					<p>A chave é elevada ao quadrado e então é tirado seu modulo com M.</p><br>
-					<p>Exemplo: chave 312</p>
-								<p>312<SUP>2</Sup> = 97344</p>
-					<p>Considerando M igual a 100</p>
-                     <p>97344 mod 100 = 44</p>
-					 <p>A chave 312 foi então inserida na posição 44 da tabela de hash</p><br><b>
-
-
-					
-                       
-					
-					<table width="600" cellspacing="1" cellpadding="3" border="0" bgcolor="#165480"> 
-					<tr> 
-					<td bgcolor="#ffffcc"> 
-					<font face="helvetica, helvetica, helvetica" size=3> 
-					<i><p>unsigned int const k = 10; // M==1024</p>
-					   <p>unsigned int const w = bitsizeof(unsigned int);</p>
-					   <p>unsigned int h(unsigned int x) {</p>
-					   <p>return (x * x) >> (w - k);</p>
-					   <p>} </p>
-					</i>
-					</font> 
-					</td> 
-					</tr> 
-					</table> 
-						
-					
-					
-					
-					<br><br><br><p>
-					 <p><b>Bom, você ainda pode estar um pouco confuso, então tá na hora de por a mão na massa e testar né?</b> </p>
-					<p>O simulador abaixo é pertencente ao docente <b>Donald Alan Retzlaff</b> do College of Saint Elizabeth e está vinculado a <a href="http://www.cse.unt.edu/~donr/courses/2050/HashSimulator/hashsim.cgi">esta página</a>, através dele você pode ver o processo de organização de tabelas hashing selecionando o método para posicionamento (hashing)</p>
-					<p>Você pode inserir dados na hashing e ver como a tabela se organiza simultaneamente</p>
-					<br><br><br>
-					<IFRAME src="http://www.cse.unt.edu/~donr/courses/2050/HashSimulator" width="1000" height="600" scrolling="no" frameborder="0" align="center"></IFRAME> 
-					 <br><br>
-					 <p><b>Além disso é possível selecionar um método e depois clicando "View Description" ser levado a explicação de como ele funciona</b> </p><br><br>
-					
-                     
-					 
-					 
- <p><b>Caso ainda hajam dúvidas sobre o funcionamento da hashing, abaixo disponibilizamos uma sequencia de 10 vídeo aulas bem curtinhas do canal Linguagem C Programação Descomplicada que explicam passo a passo como funciona</b> </p>
-
-
-
-
-
-<article class="accordion">
-    <center>
-	<section id="acc1">
-		<h2><a href="#acc1">Definição</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/njkANXEMHTY" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc2">
-		<h2><a href="#acc2">Implementação</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/K40yG9bmVZ4" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc3">
-		<h2><a href="#acc3">Criando e Destruindo a Tabela</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/X55Ku_Mpw5g" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc4">
-		<h2><a href="#acc4">Função de Hashing</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/o0TXB3QPOWY" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc5">
-		<h2><a href="#acc5">Inserção e Busca (Sem tratamento)</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/sYKarxRQ_-g" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-		<section id="acc6">
-		<h2><a href="#acc6">Hashing Universal</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/-3ZTWubURdc" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc7">
-		<h2><a href="#acc7">Hashing Perfeito e Imperfeito</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/KsWzI1z0z9o" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc8">
-		<h2><a href="#acc8">Tratamento de colisão</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/wBReEzdR7So" frameborder="0" allowfullscreen></iframe></p>
-	</section>
-	
-	<section id="acc9">
-		<h2><a href="#acc9">Tratamento de colisão (Endereçamento)</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/BDYiADxBqXA" frameborder="0" allowfullscreen></iframe></p>
-		
-	</section>
-     
-	<section id="acc0">
-		<h2><a href="#acc0">Inserção e Busca (Com Tratamento)</a></h2>
-		<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Dhbgy2q0h4w" frameborder="0" allowfullscreen></iframe></p>
-		</center>
-	</section> 
-</article>
-
-
-
+					<p>Mas o que isso significa?
+							Vamos pensar num sistema que guarda o nome de várias pessoas e outros dados como endereço e telefone.
+							Vamos supor que precisamos acessar estes nomes com frequência e que em determinado momento precisamos retornar todas
+							as pessoas cujo nome é Maria. Como fazer isso sem pesquisar uma arquivo inteiro realizando vários seeks?</p>
+					<br/>
+					<p>	A solução pode ser realizada usando uma <strong>Lista Invertida</strong>.
+							Podemos fazer um arquivo com Nomes e seus RRNs respectivos. Em outro arquivo faremos uma lista contendo
+							a chave primária para este nome e um RRN para a próxima chave que o contém.</p>
+					<br/>
+					<p> Para ilustrar isso, vamos usar o exemplo ao lado, disponível no link :
+							<a href="http://wiki.icmc.usp.br/images/6/62/SCC0215012014outrosIndicesParte04.pdf">clique aqui</a>.
+							Nele você vai encontrar vantagens, desvantagens e outros tópicos importantes.</p>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<img src="../img/listas.jpg">
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/>
+				</div>
 		</section>
-=======
+		<!-- Lista Invertida -->
+		<!-- Arvores -->
+		<section id="arvores">
+		  <div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12 top">
+					<h2>Árvores B e Generalizações</h2>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/><br/>
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-12">
+					<p>	Uma rápida pesquisa sobre Árvores B no Google nos retorna o seguinte resultado (de acordo com a Wikipedia :D):</p>
+					<br>
+					<p>Se analisarmos as árvores B,<strong> elas são uma generalização das árvores binária de busca </strong>,
+						pois cada nó de uma árvore binária armazena uma única chave de busca, enquanto <strong>as árvores B armazenam
+					  um número maior do que um de chaves de busca em cada nó</strong>, ou no termo mais usual para essa árvore, em cada página.</p>
+					<br>
+					<p>Em uma árvore-B, uma página, ou um nó,consiste de uma seqüência ordenada de chaves e um conjunto de ponteiros</p>
+					<br>
+					<p>Chamamos de <strong>ORDEM</strong> o número máximo de ponteiros que podem ser armazenados numa árvore-B.
+						O número máximo de ponteiros é igual ao número máximo de descedentes em um nó. A árvore cresce de cima para baixo e ao chegar ao limite do número de descendentes ocorre o que chamamos de <u>divisão e promoção</u>. Uma árvore de ordem N, armazena N-1 chaves.</p>
+					<br>
+					<p> <a href="http://ats.oka.nu/b-tree/b-tree.manual.html">Acesse este site</a> e adicione valores para a árvore. Vejam como ela se comporta
+							e como funciona a divisão e promoção. O que você pode afirmar sobre isso?
+					</p>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-12">
+						<img src="../img/tirinha273.jpg">
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/>
+				</div>
+			</div>
 		</section>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<!-- /Arvores -->
+		<!-- Inserção em Arvores B -->
+		<section id="insereArvoreB">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Inserção em Árvores B</h2>
+				</div>
+				<div class="col-lg-2 col-md-2"></div>
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<p> No video abaixo vamos entender como funciona a inserção em Árvores-B.
+						Nele é possível ver como funciona a divisão e promoção. Veja como funciona o algoritmo!</p>
+					<br/>
+					<div class="embed-responsive embed-responsive-16by9">
+	  				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dBPJAM0Glls"></iframe>
+					</div>
+					<br/><br/>
+				</div>
+			</div>
+		</section>
+		<!-- / Inserção em Arvores B -->
+		<!-- Remoção em Árvores B -->
+		<section id="removeArvoreB">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Remoção em Árvores B</h2>
+				</div>
+				<div class="col-lg-2 col-md-2"></div>
+				<div class="col-lg-8 col-md-12 col-sm-12">
+					<p> Na Remoção temos a <u>redistribuição</u> e <u>concatenação</u>. Veja como elas funcionam no vídeo abaixo:</p>
+					<br/>
+					<div class="embed-responsive embed-responsive-16by9">
+	  				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XxFzd8s2u60"></iframe>
+					</div>
+					<br/><br/>
+				</div>
+			</div>
+		</section>
+		<!-- / Remoção em Árvores B -->
+		<!-- Busca em árvore binária -->
+		<section id="buscaArvore">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Busca em Árvores Binárias</h2>
+				</div>
+				<div class="col-lg-2 col-md-2"></div>
+				<div class="col-lg-8 col-md-12 col-sm-12">
+					<p> Para adicionarmos ou removermos valores em uma árvore binária, é necessário uma busca.
+						Para isso, usamos a Árvore Binária de Busca, muito bem explicada no video a seguir.</p>
+					<div class="embed-responsive embed-responsive-16by9">
+	  				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/M7cb4HjePJk"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Busca em árvore binária -->
+		<!-- Visualgo Arvore -->
+		<section id="visualgoArvore">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Árvore Interativa</h2>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<p>A animação abaixo é do site http://visualgo.net/ e você pode vê-la no modo de exploração ou tutorial.
+					Você pode inserir dados na árvore e ao mesmo tempo ver como o código foi escrito!</p>
+					<div class="embed-responsive embed-responsive-16by9">
+	  				<iframe class="embed-responsive-item" src="http://visualgo.net/bst"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /Visualgo árvore -->
+		<!-- Hashing -->
+		<section id="hashing">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Hashing (Espalhamento)</h2>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<img src="../img/hashing.png">
+				</div>
+				<div class="col-lg-8 col-md-6 col-sm-6">
+					<p><i>Em ciência da computação a tabela hash (de hashing, no inglês),
+						também conhecida por tabela de espalhamento, é uma estrutura de dados especial,
+						que associa chaves de pesquisa (hash) a valores. Seu objetivo é,
+						a partir de uma chave simples, fazer uma busca rápida e obter o valor desejado.</i>
+						- <b>WikiLivros Algoritmos e estruturas de dados</b></p>
+						<br/>
+						<p>Para a maximização do desempenho de uma tabela hashing espera-se idealmente que não hajam colisões,
+						ou seja, que cada valor atribuido leve a uma posição única na cadeia.
+						Atribui-se portanto essa tarefa a uma função de espalhamento toda tabela de hashing é portanto gerada
+						por uma função de espalhamento.</p>
+						<p>Essa função funciona da seguinte forma h(k) transforma uma chave k em um endereço,
+							este endereço é usado como base para o armazenamento e recuperação de registros,
+							isso é similar a uma indexação, pois associa a chave ao endereço relativo do registro.</p>
+						<p>Existem diversos métodos para a implementação da função de espalhamento abaixo explicitamos os dois mais populares:</p>
+						<br/><br/><br/><br/>
+				</div>
+			</div>
+		</section>
 		<!-- /Hashing -->
+		 <!-- Métodos Hashing -->
+		 <section id="metodoDivisao">
+			 <div class="content">
+				 <div class="col-lg-6 col-md-4 col-sm-4">
+					 <h2>Método da Divisão</h2>
+				 </div>
+				 <div class="col-lg-6 col-md-4 col-sm-4">
+					 <h2>Método do Quadrado</h2>
+				 </div>
+				 <div class="col-lg-6 col-md-6 col-sm-6 ">
+					 <p>Nesse método a chave K é dividida pela dimensão da tabela M,
+						 o resto da divisão é então considerado o endereço, estando sempre no intervalo entre 0 e M-1.
+						 De maneira geral acaba-se por substituir M pelo número pelo primeiro numero primo que o sucede,
+						 desde que este seja não muito próximo de potências de 2. Por exemplo:
+						 Desejamos alocar 1000 cadeias de 8 bits e podemos ter listas de tamanho 4</p><br>
+						<p><b>Temos então que M = 1000/250 = 4 </b> Porém desejamos encontrar o primeiro número primo
+						<b>maior que 250</b></p><br>
+						<p>Consultando a tabela de números primos teremos que <strong>M=251</strong>
+						O motivo para isto está <a href="http://stackoverflow.com/questions/1145217/why-should-hash-functionsuse-a-prime-number-modulus"> neste link</a>.</p>
+						<img src="../img/primos.png">
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<p>Esse método foi inventado por <super>John von Neumann</super>
+							A chave é elevada ao quadrado e então é tirado seu modulo com M.<br>
+							Exemplo: <br/>
+							<p>Chave 312 -> 312<sup>2</sup> = 97344</p><br/>
+							<p>Considerando M igual a 100</p><br/>
+							<p>97344 mod 100 = 44</p><br/>
+							<p>A chave 312 foi então inserida na posição 44 da tabela de hash</p><br></p>
+							<br>
+							<code>unsigned int const k = 10; // M==1024<br/>
+								unsigned int const w = bitsizeof(unsigned int);<br/>
+								unsigned int h(unsigned int x) {<br/>
+									return (x * x) >> (w - k);<br/>
+								}</code>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<br/><br/><br/>
+					</div>
+				</div>
+			</section>
+			<!-- /Métodos Hashing -->
+			<!-- Simulador Hashing -->
+			<section id="simulaHash">
+				<div class="content">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<h2>Simulador de Hashing</h2>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<p>O simulador abaixo é pertencente ao docente <b>Donald Alan Retzlaff</b> do College of Saint Elizabeth
+							e está vinculado a <a href="http://www.cse.unt.edu/~donr/courses/2050/HashSimulator/hashsim.cgi">esta página</a>,
+							através dele você pode ver o processo de organização de tabelas hashing selecionando o método para posicionamento (hashing)
+							Você pode inserir dados na hashing e ver como a tabela se organiza simultaneamente</p>
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="http://www.cse.unt.edu/~donr/courses/2050/HashSimulator"></iframe>
+						</div>
+						<p>Além disso, é possível selecionar um método e depois clicar "View Description"
+							e ser levado a explicação de como ele funciona</p>
+					</div>
+				</div>
+			</section>
+			<!-- /Simulador Hashing -->
+			<!-- Video aulas de hashing -->
+			<section id="videosHash">
+				<div class="content">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<p>Caso ainda hajam dúvidas sobre o funcionamento da hashing, abaixo disponibilizamos uma sequencia de 10 vídeo aulas bem curtinhas do canal Linguagem C Programação Descomplicada que explicam passo a passo como funciona</p>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<article class="accordion">
+						    <center>
+							<section id="acc1">
+								<h2><a href="#acc1">Definição</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/njkANXEMHTY" frameborder="0" allowfullscreen></iframe></p>
+							</section>
 
+							<section id="acc2">
+								<h2><a href="#acc2">Implementação</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/K40yG9bmVZ4" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+							<section id="acc3">
+								<h2><a href="#acc3">Criando e Destruindo a Tabela</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/X55Ku_Mpw5g" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+							<section id="acc4">
+								<h2><a href="#acc4">Função de Hashing</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/o0TXB3QPOWY" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+							<section id="acc5">
+								<h2><a href="#acc5">Inserção e Busca (Sem tratamento)</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/sYKarxRQ_-g" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+								<section id="acc6">
+								<h2><a href="#acc6">Hashing Universal</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/-3ZTWubURdc" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+							<section id="acc7">
+								<h2><a href="#acc7">Hashing Perfeito e Imperfeito</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/KsWzI1z0z9o" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+							<section id="acc8">
+								<h2><a href="#acc8">Tratamento de colisão</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/wBReEzdR7So" frameborder="0" allowfullscreen></iframe></p>
+							</section>
+
+							<section id="acc9">
+								<h2><a href="#acc9">Tratamento de colisão (Endereçamento)</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/BDYiADxBqXA" frameborder="0" allowfullscreen></iframe></p>
+
+							</section>
+
+							<section id="acc0">
+								<h2><a href="#acc0">Inserção e Busca (Com Tratamento)</a></h2>
+								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Dhbgy2q0h4w" frameborder="0" allowfullscreen></iframe></p>
+								</center>
+							</section>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- /Video aulas de hashing -->
 		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
-		<script type="text/javascript" src="../js/jquery.nav.js"></script> 
+		<script type="text/javascript" src="../js/jquery.nav.js"></script>
 		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="../js/jquery.isotope.js"></script>
-		<script type="text/javascript" src="../js/wow.js"></script> 
+		<script type="text/javascript" src="../js/wow.js"></script>
+		<script type="text/javascript" src="../js/custom.js"></script>
 	</body>
 </html>

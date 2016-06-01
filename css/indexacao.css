@@ -1,5 +1,4 @@
-div.background 
-{
+div.background {
     width: 100%;
     height: 250px;
     background-image: url('../img/indexacao.png');
@@ -9,21 +8,17 @@ div.background
     margin-top: 30px;
     position: relative;
 }
-div.background-color{
-	
-	
-    background-color: #FFFFE0;
-    
-    
-    
-	
+
+.top {
+    padding-top: 50px;
 }
-.paddingTop{
-	padding-top: 30px;
+
+div.background-color{
+    background-color: #FFFFE0;
 }
 
 p{
-	font-family: Open Sans
+	font-family: Open Sans;
 	font-size : 16px;
 	color: #333;
 }
@@ -49,17 +44,6 @@ li{
 	line-height: 40px;
 }
 
-.top-chaves{
-	margin-top: 200px;
-}
-
-<<<<<<< HEAD
-
-
-
-
-
-
 article.accordion
 {
 	display: block;
@@ -68,9 +52,7 @@ article.accordion
 	background-color: #ffc;
 	overflow: hidden;
 	border-radius: 5px;
-	/**box-shadow: 0 3px 3px rgba(0,0,0,0.3)**/
 }
-
 
 article.accordion section
 {
@@ -85,7 +67,6 @@ article.accordion section
 	overflow: hidden;
 	border-radius: 2em;
 }
-
 
 article.accordion section h2
 {
@@ -143,9 +124,7 @@ article.accordion section:target h2
 	-ms-transform: rotate(0deg);
 	-o-transform: rotate(0deg);
 	transform: rotate(0deg);
-	
 }
-
 
 article.accordion section,
 article.accordion section h2
@@ -155,3 +134,4 @@ article.accordion section h2
 	-ms-transition: all 1s ease;
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
+}

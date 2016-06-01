@@ -105,11 +105,6 @@
 						<li>Possibilitar <strong>múltiplas visões</strong> do arquivo criando mais de um índice.</li>
 						<li>Fonecer <strong>acesso rápido</strong> a arquivos com registros de tamanho variável.</li>
 					</ul>
-					<p>Cada estrutura de índice está associada a uma chave de busca particular.</p><br>
-					<p>O índice primário é o fator de ordenação básico da tabela, normalmente o índice primário utiliza a chave primária. Os demais índices são chamados de índice secundário.<br>
-					Quanto a técnica de construção os índices podem ser : - Índice denso : um registro de índice aparece para cada valor da chave de busca da tabela e contém o valor da chave de busca e o ponteiro para o registro. - Índice esparso : registros de índices são criados somente para alguns registros, localizando o registro com o valor menor ou igual ao desejado, depois pesquisa sequencial. 
-					<a href="http://slideplayer.com.br/slide/359974/">Fonte</a>
-					</p><br>
 				</div>
 			</div>
 		</section>
@@ -233,7 +228,6 @@
 					<div class="embed-responsive embed-responsive-16by9">
 	  				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/M7cb4HjePJk"></iframe>
 					</div>
-					<br/><br/>
 				</div>
 			</div>
 		</section>
@@ -250,32 +244,9 @@
 					<div class="embed-responsive embed-responsive-16by9">
 	  				<iframe class="embed-responsive-item" src="http://visualgo.net/bst"></iframe>
 					</div>
-					<br/><br/>
 				</div>
 			</div>
 		</section>
-		
-		<br><br><br><br><br><br>
-		<!-- /Arvore B+ -->
-		<!--  -->
-		<section id="visualizationB+">
-			<div class="content">
-				<div class="col-lg-12 col-md-12 col-sm-12">
-					<h2>Árvore B+</h2>
-				</div>
-				<div class="col-lg-12 col-md-12 col-sm-12">
-					<p>A árvore B+ é derivada da árvore B, mas armazena suas chaves de maneira diferente, logo seus algoritmos de busca, inserção e remoção
-					são diferentes.
-					São sistemas que usam esta árovre: NTFS para o Microsoft Windows, o sistema de arquivos ReiserFS para Unix,
-					o XFS para IRIX e Linux, e o JFS2 para AIX, OS/2 e Linux,</p>
-					<div class="embed-responsive embed-responsive-16by9">
-	  				<iframe class="embed-responsive-item" src="https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html"></iframe>
-					</div>
-					<br/><br/>
-				</div>
-			</div>
-		</section>
-		
 		<!-- /Visualgo árvore -->
 		<!-- Hashing -->
 		<section id="hashing">
@@ -301,22 +272,18 @@
 							este endereço é usado como base para o armazenamento e recuperação de registros,
 							isso é similar a uma indexação, pois associa a chave ao endereço relativo do registro.</p>
 						<p>Existem diversos métodos para a implementação da função de espalhamento abaixo explicitamos os dois mais populares:</p>
-						<br/><br/><br/><br/>
+						<br/><br/><br/><br/><br/><br/><br/><br/>
 				</div>
 			</div>
 		</section>
 		<!-- /Hashing -->
 		 <!-- Métodos Hashing -->
 		 <section id="metodoDivisao">
-			 <div class="content">
-				 <div class="col-lg-6 col-md-6 col-sm-6">
-					 <h2>Método da Divisão</h2>
-				 </div>
-				 <div class="col-lg-6 col-md-6 col-sm-6">
-					 <h2>Método do Quadrado</h2>
-				 </div>
-				 <div class="col-lg-6 col-md-6 col-sm-6 ">
-					 <p>Nesse método a chave K é dividida pela dimensão da tabela M,
+				<div class="content">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<h2>Método da Divisão</h2>
+						<br/>
+						<p>Nesse método a chave K é dividida pela dimensão da tabela M,
 						 o resto da divisão é então considerado o endereço, estando sempre no intervalo entre 0 e M-1.
 						 De maneira geral acaba-se por substituir M pelo número pelo primeiro numero primo que o sucede,
 						 desde que este seja não muito próximo de potências de 2. Por exemplo:
@@ -324,11 +291,14 @@
 						<p><b>Temos então que M = 1000/250 = 4 </b> Porém desejamos encontrar o primeiro número primo
 						<b>maior que 250</b></p><br>
 						<p>Consultando a tabela de números primos teremos que <strong>M=251</strong>
-						O motivo para isto está <a href="http://stackoverflow.com/questions/1145217/why-should-hash-functionsuse-a-prime-number-modulus"> neste link</a>.</p>
+						O motivo para isto está <a href="http://stackoverflow.com/questions/1145217/why-should-hash-functionsuse-a-prime-number-modulus"> neste link</a>.
+						</p>
 						<img src="../img/primos.png">
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6">
-						<p>Esse método foi inventado por <super>John von Neumann</super>
+						<h2>Método do Quadrado</h2>
+						<br>
+							<p>Esse método foi inventado por <super>John von Neumann</super>
 							A chave é elevada ao quadrado e então é tirado seu modulo com M.<br>
 							Exemplo: <br/>
 							<p>Chave 312 -> 312<sup>2</sup> = 97344</p><br/>
@@ -342,7 +312,7 @@
 									return (x * x) >> (w - k);<br/>
 								}</code>
 					</div>
-					<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
 						<br/><br/><br/>
 					</div>
 				</div>
@@ -372,62 +342,81 @@
 			<section id="videosHash">
 				<div class="content">
 					<div class="col-lg-12 col-md-12 col-sm-12">
-						<p>Caso ainda hajam dúvidas sobre o funcionamento da hashing, abaixo disponibilizamos
-							uma sequencia de 10 vídeo aulas bem curtinhas do canal Linguagem C Programação
-							Descomplicada que explicam passo a passo como funciona</p>
+						<p>Caso ainda hajam dúvidas sobre o funcionamento da hashing, 
+						abaixo disponibilizamos uma sequencia de 10 vídeo aulas bem curtinhas do canal Linguagem C Programação Descomplicada 
+						que explicam passo a passo como funciona</p>
 					</div>
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<article class="accordion">
 						    <center>
 							<section id="acc1">
 								<h2><a href="#acc1">Definição</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/njkANXEMHTY" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/njkANXEMHTY" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc2">
 								<h2><a href="#acc2">Implementação</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/K40yG9bmVZ4" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K40yG9bmVZ4" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc3">
 								<h2><a href="#acc3">Criando e Destruindo a Tabela</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/X55Ku_Mpw5g" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X55Ku_Mpw5g" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc4">
 								<h2><a href="#acc4">Função de Hashing</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/o0TXB3QPOWY" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/o0TXB3QPOWY" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc5">
 								<h2><a href="#acc5">Inserção e Busca (Sem tratamento)</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/sYKarxRQ_-g" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sYKarxRQ_-g" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 								<section id="acc6">
 								<h2><a href="#acc6">Hashing Universal</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/-3ZTWubURdc" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-3ZTWubURdc" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc7">
 								<h2><a href="#acc7">Hashing Perfeito e Imperfeito</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/KsWzI1z0z9o" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KsWzI1z0z9o" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc8">
 								<h2><a href="#acc8">Tratamento de colisão</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/wBReEzdR7So" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wBReEzdR7So" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc9">
 								<h2><a href="#acc9">Tratamento de colisão (Endereçamento)</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/BDYiADxBqXA" frameborder="0" allowfullscreen></iframe></p>
-
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BDYiADxBqXA" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</section>
 
 							<section id="acc0">
 								<h2><a href="#acc0">Inserção e Busca (Com Tratamento)</a></h2>
-								<p><iframe width="560" height="315" src="https://www.youtube.com/embed/Dhbgy2q0h4w" frameborder="0" allowfullscreen></iframe></p>
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Dhbgy2q0h4w" frameborder="0" allowfullscreen></iframe>
+								</div>
 								</center>
 							</section>
 						</article>

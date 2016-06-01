@@ -49,7 +49,7 @@ article.accordion
 	display: block;
 	width: 74em;
 	margin: 0 auto;
-	background-color: #ffc;
+	background-color: #fff;
 	overflow: hidden;
 	border-radius: 5px;
 }
@@ -99,7 +99,7 @@ article.accordion section h2 a
 	width: 100%;
 	line-height: 1em;
 	text-decoration: none;
-	color: #ffc;
+	color: #fff;
 	text-shadow: 0.2em 0.2em 0.2em #000;
 	outline: 0 ;
 }
@@ -109,7 +109,7 @@ article.accordion section:target
 	width: 44em;
 	padding: 0 1em;
 	color: #333;
-	background-color: #ffc;
+	background-color: #fff;
 	overflow:hidden;
 }
 

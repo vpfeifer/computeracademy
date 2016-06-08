@@ -66,3 +66,27 @@ a.read-more-armazenamento:hover {
 .modal-backdrop.in{
   opacity: .90;
 }
+
+.code{
+  padding: 12px 16px;
+  border-left: 4px solid #4CAF50 !important;
+  margin: 20px 0;
+  font-family: Consolas, "Courier New";
+  font-size: 16px;
+  line-height: 1.4;
+  width: auto;
+  background-color: #555;
+  color: #ECECEC;
+}
+
+.code>i{
+  color: #ccc;
+}
+
+.code>b{
+  color: #59ABE3;
+}
+
+.code>t{
+  color: #f1c40f;
+}

@@ -1,351 +1,389 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, maximum-scale=1">
-  <title>Computer Academy</title>
-  <link rel="icon" href="../favicon.png" type="image/png">
-  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="../css/style.css" rel="stylesheet" type="text/css">
-  <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
-  <link href="../css/animate.css" rel="stylesheet" type="text/css">
-  <link href="../css/armazenamento.css" rel="stylesheet" type="text/css">
-  <!--[if lt IE 9]>
-  <script src="js/respond-1.1.0.min.js"></script>
-  <script src="js/html5shiv.js"></script>
-  <script src="js/html5element.js"></script>
-  <![endif]-->
+  <!doctype html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <title>Computer Academy</title>
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../css/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/armazenamento.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="js/respond-1.1.0.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/html5element.js"></script>
+    <![endif]-->
 
-</head>
-<body>
+  </head>
+  <body>
 
-  <!--Header_section-->
-  <header id="header_wrapper">
-    <div class="container">
-      <div class="header_box">
-        <div class="logo">
-          <a href="#"><img src="../img/logo.png" alt="logo"></a>
-          <span class="logo-title">Armazenamento</span>
+    <!--Header_section-->
+    <header id="header_wrapper">
+      <div class="container">
+        <div class="header_box">
+          <div class="logo">
+            <a href="#"><img src="../img/logo.png" alt="logo"></a>
+            <span class="logo-title">Armazenamento</span>
+          </div>
+          <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+              <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div id="main-nav" class="collapse navbar-collapse navStyle">
+              <ul class="nav navbar-nav" id="mainNav">
+                <li class="active"><a href="#intro" class="scroll-link">Intro</a></li>
+                <li><a href="#historico" class="scroll-link">Histórico</a></li>
+                <li><a href="#hd" class="scroll-link">Disco Rígido</a></li>
+                <li><a href="../index.html#modulos">Voltar para Academia</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
-        <nav class="navbar navbar-inverse" role="navigation">
-          <div class="navbar-header">
-            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          </div>
-          <div id="main-nav" class="collapse navbar-collapse navStyle">
-            <ul class="nav navbar-nav" id="mainNav">
-              <li class="active"><a href="#intro" class="scroll-link">Intro</a></li>
-              <li><a href="#historico" class="scroll-link">Histórico</a></li>
-              <li><a href="../index.html#modulos">Voltar para Academia</a></li>
-            </ul>
-          </div>
-        </nav>
       </div>
-    </div>
-  </header>
-  <!--Header_section-->
+    </header>
+    <!--Header_section-->
 
-  <!-- Intro -->
-  <section id="intro">
-    <div class="container">
-      <div class="hero_section">
-        <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
-          <p>O objetivo deste módulo é apresentar ao leitor o funcionamento do <strong>armazenamento</strong> secundário
-            de um computador, em especial o Disco Rígido (HD - <i>Hard Disk</i>).</p>
-            <br/>
-            <p>Esse conhecimento é importante para o aprendiz de estrutura de dados, pois ao longo do curso ele aprenderá
-              técnicas para aumentar o desempenho de acesso a um arquivo, como indexação por exemplo. E onde estarão armazenados
-              esses arquivos? <strong>Bingo!</strong> Se você pensou em <strong>HD</strong>, acertou em cheio.</p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 pull-right">
-              <img src="../img/armazenamento/HDDconstruction.jpg" alt="HD"/>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+    <!-- Intro -->
+    <section id="intro">
+      <div class="container">
+        <div class="hero_section">
+          <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+            <p>O objetivo deste módulo é apresentar ao leitor o funcionamento do <strong>armazenamento</strong> secundário
+              de um computador, em especial o Disco Rígido (HD - <i>Hard Disk</i>).</p>
               <br/>
-              <p>Não se assuste com a imagem, nas próximas seções explicaremos o funcionamento do HD, e para que serve
-                cada um dos componentes presentes na imagem. Esperamos que goste do conteúdo que preparamos para você, então
-                siga em frente e bons estudos!</p>
+              <p>Esse conhecimento é importante para o aprendiz de estrutura de dados, pois ao longo do curso ele aprenderá
+                técnicas para aumentar o desempenho de acesso a um arquivo, como indexação por exemplo. E onde estarão armazenados
+                esses arquivos? <strong>Bingo!</strong> Se você pensou em <strong>HD</strong>, acertou em cheio.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 pull-right">
+                <img src="../img/armazenamento/HDDconstruction.jpg" alt="HD"/>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
                 <br/>
-                <a href="#historico" class="read-more-armazenamento">Começar agora!</a>
+                <p>Não se assuste com a imagem, nas próximas seções explicaremos o funcionamento do HD, e para que serve
+                  cada um dos componentes presentes na imagem. Esperamos que goste do conteúdo que preparamos para você, então
+                  siga em frente e bons estudos!</p>
+                  <br/>
+                  <a href="#historico" class="read-more-armazenamento">Começar agora!</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <!-- /Intro -->
-        <br/><br/><br/><br/><br/>
-        <!-- Historico -->
-        <section id="historico">
-          <div class="container historico-top">
-            <div class="modal fade" id="historicoModal" role="dialog">
-              <div class="modal-dialog modal-lg">
-                <!-- Modal content-->
-                <div class="historicoModal-content">
-                  <div class="historicoModal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="historicoModal-title">Modal Header</h2>
-                  </div>
-                  <div class="historicoModal-body">
-                    <p>Some text in the modal.</p>
-                  </div>
-                  <div class="historicoModal-footer">
-                    <br/>
-                    <button type="button" class="btn-lg btn-danger pull-right" data-dismiss="modal">Fechar</button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <h2>Histórico</h2>
-            <div class="col-md-12 col-sm-12">
-              <p>O armazenamento secundário foi projetado para armazenar dados por períodos de tempo prolongados.
-                As imagens a seguir apresentam os principais marcos históricos do desenvolvimento dessa tecnologia.
-                Clique nas imagens para ver mais detalhes de cada um desses marcos.</p>
-                <br/>
-              </div>
-              <!-- Modulos Wrapper -->
-              <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
-
-                <!-- Modulos Item -->
-                <div id="paper-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/papel.png"  alt="Papel"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">Papel</h4>
-                    </div>
-                  </div>
-                </div>
-                <!--/Modulos Item -->
-
-                <!-- Modulos Item-->
-                <div id="perfurado-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/perfurado.jpg" alt="Cartão Perfurado"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">Cartão Perfurado</h4>
-                    </div>
-                  </div>
-                </div>
-                <!--/Modulos Item -->
-
-                <!-- Modulos Item -->
-                <div id="tuboWilliams-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/tuboWilliams.jpg" alt="Tubo de Williams"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">Tubo de Williams</h4>
-                    </div>
-                  </div>
-                </div>
-                <!--/Modulos Item-->
-
-                <!-- Modulos Item-->
-                <div id="tamborMemoria-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  prototype web isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/tamborMemoria.jpg" alt="Tambor de Memória"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">Tambor de Memória</h4>
-                    </div>
-                  </div>
-                </div>
-                <!-- Modulos Item -->
-
-                <!-- Modulos Item -->
-                <div id="uniservo-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/uniservo.jpg" alt="Uniservo"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">Uniservo</h4>
-                    </div>
-                  </div>
-                </div>
-                <!--/Modulos Item -->
-
-                <!-- Portfolio Item -->
-                <div id="ramac-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/ramac.jpg" alt="Ramac"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">IBM 350 RAMAC</h4>
-                    </div>
-                  </div>
-                </div>
-                <!--/Portfolio Item -->
-
-                <!-- Portfolio Item  -->
-                <div id="ibm3380-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/ibm3380.jpg" alt="IBM 3380"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">IBM 3380</h4>
-                    </div>
-                  </div>
-                </div>
-                <!--/Portfolio Item -->
-
-                <!-- Portfolio Item -->
-                <div id="st506-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/st506.jpg" alt="ST-506"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">ST-506</h4>
-                    </div>
-                  </div>
-                </a> </div>
-                <!--/Portfolio Item -->
-
-                <!-- Portfolio Item -->
-                <div id="seagate-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/seagateBarracuda.jpg" alt="Seagate Barracuda"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">Seagate Barracuda</h4>
-                    </div>
-                  </div>
-                </a> </div>
-                <!--/Portfolio Item -->
-
-                <!-- Portfolio Item -->
-                <div id="ssd-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                  <div class="portfolio_img"> <img src="../img/armazenamento/ssd.jpg" alt="Solid-State Drive"> </div>
-                  <div class="item_overlay">
-                    <div class="item_info">
-                      <h4 class="project_name">SSD</h4>
-                    </div>
-                  </div>
-                </a> </div>
-                <!--/Portfolio Item -->
-
-              </div>
-              <!--/Portfolio Wrapper -->
             </div>
           </section>
-          <!-- /Historico -->
+          <!-- /Intro -->
+          <br/><br/><br/><br/><br/>
+          <!-- Historico -->
+          <section id="historico">
+            <div class="container historico-top">
+              <div class="modal fade" id="historicoModal" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="historicoModal-content">
+                    <div class="historicoModal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h2 class="historicoModal-title">Modal Header</h2>
+                    </div>
+                    <div class="historicoModal-body">
+                      <p>Some text in the modal.</p>
+                    </div>
+                    <div class="historicoModal-footer">
+                      <br/>
+                      <button type="button" class="btn-lg btn-danger pull-right" data-dismiss="modal">Fechar</button>
+                    </div>
+                  </div>
 
-          <!-- Referências -->
-          <section id="referencias">
-            <h2>Referências</h2>
-            <div class="col-md-2 col-sm-2"></div>
-            <div class="col-md-8 col-sm-8">
-              <ol>
-                <li>Slides da Profa. Dra. Veronica Oliveira de Carvalho</li>
-                <li><a href="http://www.miniweb.com.br/historia/Artigos/i_antiga/invencao_papel.html">Invenção do papel</a></li>
-                <li><a href="http://pplware.sapo.pt/internet/a-historia-do-armazenamento-digital/">História do armazenamento</a></li>
-              </ol>
-            </div>
-            <div class="col-md-2 col-sm-2"></div>
-          </section>
-          <!-- /Referências -->
-          <p class="paper-text hide">O papel (de origem vegetal) é considerado por muitos a primeira forma de armazenamento de informações por
-            tempo prolongado da humanidade, sua criação é atribuída a um oficial do tribunal chinês, Cao Lun, em 105 A.C.
-            A primeira fábrica de papel foi instituída em Tsai Lun, China, no mesmo ano. A técnica de produção de papel foi mantido em
-            segredo pelos chineses, por cerca de 500 anos.
-            <br/><br/>
-            Os japoneses conheceram-no no século VII, e já em 770 produziram a primeira publicação - uma oração budista impressa em bloco batido
-            - técnica do carimbo, do qual editaram cerca de 1.000.000 de exemplares.
-            A tecnologia para a fabricação do papel chinês, manual e em pequenas folhas, foi conhecida pelos europeus depois que os árabes
-            venceram os chineses em Samarcanda, 751 da nossa era. Os árabes, que ali aprenderam a confecção do papel começaram a fabricá-lo e
-            a usá-lo intensivamente, ainda nesse estado de fabricação primitivo. Levaram os segredos da fabricação para a Espanha,
-            quando os mouros invadiram a península Ibérica no século IX. Depois que os mouros perderam o domínio territorial na Catalunha,
-            Espanha, o segredo de fabricação disseminou-se pela Europa.
-            <br/><br/>
-            A introdução do papel na administração pública árabe iniciou-se sob o reinado do califa Arun Al Rashid - o das Mil e uma Noites -
-            para evitar falsificações de documentos, porque o pergaminho era mais fácil de ser fabricado que o papel.
-            O papel começou a ser fabricado fora da jurisdição árabe, japonesa e chinesa, na Itália, em Fabriano, em 1276.
-            O papel começou a substituir paulatinamente o pergaminho. Na França, a fabricação iniciou-se em 1348, na Alemanha em 1390 e
-            na Inglaterra, em 1494. Um bom trabalhador não podia fazer mais de 750 folhas por dia. Isso explica o alto valor de todas as peças
-            literárias da época e seu pouco uso.
-            <br/><br/>
-            O processo de fabricação continuou artesanal e moroso até ao séc. XVIII, quando em dezembro de 1798, o francês Louis-Nicolas Robert,
-            patenteou uma máquina para fazer "papel de grande comprimento" ou "fitas de papel". Robert, ao inventar a máquina capaz de produzir
-            um papel com 12 a 15 metros de comprimento por cerca de 40 cm de largura, era empregado de um impressor famoso: Didot.
-            Este comprou-lhe a patente, mas não conseguiu viabilizar inteiramente o invento.
-            <br/><br/>
-            O cunhado de Didot, um inglês, roubou-lhe o desenho da máquina e, de regresso à Inglaterra, comercializou o invento.
-            Dois industriais ingleses, Henry de Fourdriner e seu irmão, aperfeiçoaram o invento transformando-o numa máquina de confecção cilíndrica.
-            O processo de fabricação foi sendo constantemente aperfeiçoado, sendo que, atualmente, máquinas de papel podem facilmente produzir
-            mais de 1000 metros de papel por minuto e por processos completamente diferentes que aqueles.
-            <br/><br/>
-            A fabricação do papel em rolos contínuos, já numa escala industrial, iniciou a revolução cultural do Ocidente que revolucionou
-            o mundo e ainda o estamos vivenciando. A invenção dos tablóides na Inglaterra e nos Estados Unidos ocorreu devido à maior facilidade de
-            produzir papel por volta de 1860, não mais em folhas, mas em rolos enormes. Só a partir da industrialização do processo de
-            fabricação de papel é que surgiram livros, jornais e revistas, num processo cada vez mais democratizado em que se difundiu desde então,
-            a cultura generalizada, a ciência, a fé, o terror e a publicidade impressa.</p>
+                </div>
+              </div>
+              <h2>Histórico</h2>
+              <div class="col-md-12 col-sm-12">
+                <p>O armazenamento secundário foi projetado para armazenar dados por períodos de tempo prolongados.
+                  As imagens a seguir apresentam os principais marcos históricos do desenvolvimento dessa tecnologia.
+                  Clique nas imagens para ver mais detalhes de cada um desses marcos.</p>
+                  <br/>
+                </div>
+                <!-- Modulos Wrapper -->
+                <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
 
-            <p class="perfurado-text hide">
-              O Cartão perfurado, ou punched card, punch card, IBM card, ou mesmo Hollerith card, foi aproveitado inicialmente por Herman Hollerith,
-              fundador da Tabulating Machine Company, uma empresa precursora da IBM, para sistemas de informação não têxteis. Estes cartões foram os
-              grandes precursores da memória usada em computadores.
-              <br/><br/>
-              Mas a história destes cartões nasceu antes, os cartões perfurados foram utilizados pela primeira vez por volta de 1725 por Basile Bouchon
-              e Jean-Baptiste Falcon, num formato mais robusto, em papel perfurado, num rolo, então em uso para controlar teares em França.
-              Esta técnica foi muito melhorada por Joseph Marie Jacquard no seu tear Jacquard em 1801.
-              <br/><br/>
-              Do ano 1900 a 1950, os cartões perfurados foram o principal meio de entrada de dados, armazenamento de dados e processamento na
-              computação institucional, tudo pela mão da IBM.</p>
+                  <!-- Modulos Item -->
+                  <div id="paper-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/papel.png"  alt="Papel"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">Papel</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/Modulos Item -->
 
-              <p class="tuboWilliams-text hide">O Tubo de Williams é um tipo de memória para computadores criada por Sir Frederick Williams no ano
-                de 1947 na Universidade inglesa de Manchester.<br/><br/>
-                Os primeiros computadores utilizavam este tipo de memória de tubos de raios catódicos, díodo-condensador e também as memórias de
-                linha de retardo. Estas últimas consistiam num tubo de aproximadamente 150 cm de comprimento contendo mercúrio, com um cristal de
-                quartzo em cada ponta onde os dados a armazenar passavam pelo mercúrio na forma de vibrações mecânicas e eram reconvertidos na outra
-                ponta.<br/><br/>
-                Este foi o primeiro dispositivo digital de memória de acesso aleatório e foi utilizado com sucesso em vários computadores antigos.
-                Este dispositivo tinha uma velocidade de 1,2 milésimos de segundo por instrução.</p>
+                  <!-- Modulos Item-->
+                  <div id="perfurado-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/perfurado.jpg" alt="Cartão Perfurado"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">Cartão Perfurado</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/Modulos Item -->
 
-                <p class="tamborMemoria-text hide">Conhecida como Drum Memory, foi inventado por Gustav Tauschek em 1932 na Áustria e foi amplamente
-                  usado na década de 1950 e na década de 1960 como a memória do computador. Algumas memórias de bateria também foram usadas ​​como
-                  armazenamento secundário.<br/><br/>
-                  A memória tambor original de Tauschek tinha uma capacidade de cerca de 500.000 bits (62,5 kB). Um dos computadores produzidos em massa,
-                  o IBM 650, tinha cerca de 8,5 kB de memória de tambor, que num modelo depois (número 4) foi duplicada a cerca de 17 kB.</p>
+                  <!-- Modulos Item -->
+                  <div id="tuboWilliams-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/tuboWilliams.jpg" alt="Tubo de Williams"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">Tubo de Williams</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/Modulos Item-->
 
-                  <p class="uniservo-text hide">A unidade de fita UNISERVO foi o principal dispositivo de I/O no computador UNIVAC I. O seu lugar ficou
-                    garantido na história pois este dispositivo foi a primeira unidade de fita para um computador vendido comercialmente.<br/><br/>
+                  <!-- Modulos Item-->
+                  <div id="tamborMemoria-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  prototype web isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/tamborMemoria.jpg" alt="Tambor de Memória"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">Tambor de Memória</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modulos Item -->
 
-                    O UNISERVO usava uma fita de metal, com meia polegada de largura (13 mm), feita de uma liga níquel-bronze de fósforo (chamado Vicalloy)
-                    e tinha 1200 metros de comprimento.</p>
+                  <!-- Modulos Item -->
+                  <div id="uniservo-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/uniservo.jpg" alt="Uniservo"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">Uniservo</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/Modulos Item -->
 
-                    <p class="ramac-text hide">O IBM 305 RAMAC foi um computador comercial desenvolvido pela IBM em 1956 e foi o primeiro a utilizar uma
-                      unidade de disco magnético com uma cabeça de leitura móvel. O RAMAC é uma sigla que significa Random Access Method of Accounting and
-                      Control ou método de acesso aleatório para contabilidade e controlo.
-                      A unidade de disco poderia armazenar até por volta de 4.4 MB de dados.</p>
+                  <!-- Portfolio Item -->
+                  <div id="ramac-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/ramac.jpg" alt="Ramac"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">IBM 350 RAMAC</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/Portfolio Item -->
 
-                      <p class="ibm3380-text hide">O IBM 3380 Direct Access Storage Device foi introduzido em Junho de 1980. Usava uma nova cabeça de leitura
-                        e tinha uma capacidade de 2.52 GB, com uma taxa de 3 MB por segundo de transferência de dados. O tempo médio de acesso era de 16 ms.
-                        Preço de compra no momento da introdução variou de 81.000 dólares 142.200 dólares.<br/><br/>
-                        Este foi o primeiro dispositivo de armazenamento a atingir o reino do Gigabyte e fica na história por esse feito.</p>
+                  <!-- Portfolio Item  -->
+                  <div id="ibm3380-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/ibm3380.jpg" alt="IBM 3380"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">IBM 3380</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/Portfolio Item -->
 
-                        <p class="st506-text hide">O ST-506 foi o primeiro disco rígido de 5″ 1/4. Apresentado em 1980 pela então denominada Shugart Technology
-                          (hoje Seagate Technology), tinha uma capacidade de 5 MB após formatação. O ST-412 (semelhante, mas muito mais caro) de 10 MB foi
-                          lançado em fins de 1981. Ambos usavam codificação MFM (já amplamente usada em unidades de disquete). Uma versão posterior do
-                          ST-412 usava RLL para um incremento de 50% na capacidade e taxa de transferência.<br/><br/>
+                  <!-- Portfolio Item -->
+                  <div id="st506-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/st506.jpg" alt="ST-506"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">ST-506</h4>
+                      </div>
+                    </div>
+                  </a> </div>
+                  <!--/Portfolio Item -->
 
-                          Esta foi a primeira drive de 5.25″ e foi quem deu origem aos actuais discos rígidos que conhecemos.</p>
+                  <!-- Portfolio Item -->
+                  <div id="seagate-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/seagateBarracuda.jpg" alt="Seagate Barracuda"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">Seagate Barracuda</h4>
+                      </div>
+                    </div>
+                  </a> </div>
+                  <!--/Portfolio Item -->
 
-                          <p class="seagate-text hide">Seagate Barracuda é uma série do disco rígido, a maioria dos quais operam a uma velocidade de rotação
-                            de 7200 RPM. Eles são produzidos pela Seagate Technology. Embora inicialmente fossem comercializados como unidades de alto desempenho
-                            com interfaces SCSI e capacidades elevadas para o seu tempo, uma vez que apareceram em 2001, tornaram-se no principal produto de mercado
-                            de massa da Seagate. Com isto a indústria dos discos rígidos começou a colocar estas unidades de 7200 RPM nas unidades de desktop.
-                            <br/><br/>
-                            Esta foi a primeira unidade a 7200 RPM tornando-se num standard para a indústria dos discos rígidos e isso marcou a história do
-                            armazenamento.</p>
+                  <!-- Portfolio Item -->
+                  <div id="ssd-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                    <div class="portfolio_img"> <img src="../img/armazenamento/ssd.jpg" alt="Solid-State Drive"> </div>
+                    <div class="item_overlay">
+                      <div class="item_info">
+                        <h4 class="project_name">SSD</h4>
+                      </div>
+                    </div>
+                  </a> </div>
+                  <!--/Portfolio Item -->
 
-                            <p class="ssd-text hide">SSD (sigla do inglês solid-state drive) ou unidade de estado sólido é um tipo de dispositivo, sem partes móveis,
-                              para armazenamento não volátil de dados digitais. São, tipicamente, construídos em torno de um circuito integrado semicondutor,
-                              tipicamente memória NAND Flash, responsável pelo armazenamento, diferindo dos sistemas magnéticos (como os HDs e fitas LTO) ou ópticos
-                              (discos como CDs e DVDs). Alguns dos dispositivos mais importantes usam memória RAM sob condições especiais.
-                              <br/><br/>
-                              Marcam a história por permitirem tempos de arranque impressionantes e armazenamento seguro. São memórias rápidas e consomem menos
-                              energia. São a evolução lógica do alojamento físico. Também podem ser combinadas com discos mecânicos, havendo assim uma unidade
-                              híbrida. Um bom exemplo disso é a unidade da Apple, a Fusion Drive.</p>
+                </div>
+                <!--/Portfolio Wrapper -->
+              </div>
+            </section>
+            <!-- /Historico -->
 
-                              <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-                              <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-                              <script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
-                              <script type="text/javascript" src="../js/jquery.nav.js"></script>
-                              <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-                              <script type="text/javascript" src="../js/jquery.isotope.js"></script>
-                              <script type="text/javascript" src="../js/wow.js"></script>
-                              <script type="text/javascript" src="../js/custom.js"></script>
-                              <script type="text/javascript" src="../js/armazenamento.js"></script>
+            <!-- HD -->
+            <section id="hd">
+              <div class="container">
+                <h2>Disco Rígido</h2>
+                <div class="col-md-8 col-sm-12">
+                  <p>O disco rígido é um conjunto de <strong>pratos</strong> empilhados, os dados são gravados na superficíes desses pratos.
+                    Eles estão representados em nos círculos azuis da figura ao lado. As superficíes são organizadas em
+                    <strong>trilhas</strong> e as trilhas são organizadas em setores. Um <strong>Cilindro</strong> é um conjunto de trilhas
+                    na mesm posição em cada um dos pratos. O <stron>Setor</strong> é a menor unidade de endereçamento do disco rígido.
+                      A figura ao lado apresenta de forma visual a descrição anterior.</p>
+                      <br/><br/>
+                      <p>E por que é importante entendermos como funciona o disco rígido? Simples, porque mais de 90% dos computadores pessoais
+                        utilizam essa tecnologia, e especificamente para os programadores, porque por vezes precisamos trabalhar com arquivos
+                        em nossos sistemas, e como dissemos anteriormente, eles ficam armazenados no HD (<i>Hard Disk</i>). Para entermos melhor
+                        o impacto para os programadores, veja o exemplo de leitura de um arquivo em C a seguir.</p>
+                        <br/>
+                      </div>
+                      <div class="col-md-4 col-sm-12">
+                        <img src="../img/armazenamento/hd.jpg"/>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <div class="code">
+                          <i>//Lê 1 byte do arquivo na posição corrente do cursor no arquivo</i><br/>
+                          <b>fread</b>(&c, <t>1</t>, <t>1</t>, fd);
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-12">
+                        <p>No código ao lado utilizamos o comando <strong>fread</strong> da linguagem C para ler 1 <i>byte</i> de um descritor de arquivos
+                          <strong>fd</strong> na variável c. Para realizar essa operação, o sistema operacional determina qual a superficíe, trilha
+                          e setor em que se encontra esse <i>byte</i>, carrega o conteúdo desse setor para uma memória especial do computador chamada de
+                          <b><i>buffer</i></b> de entrada e saída. Por fim, o <b><i>byte</i></b> desejado é lido do <i>buffer</i> para a memória RAM. Se o setor
+                          já estiver no <i>buffer</i>, o acesso ao disco rígido não é necessário.</p>
+                        </div>
+                      </div>
+                    </section>
+                    <!-- /HD -->
+                    <br/><br/><br/><br/><br/>
+                    <!-- Referências -->
+                    <section id="referencias">
+                      <h2>Referências</h2>
+                      <div class="col-md-2 col-sm-2"></div>
+                      <div class="col-md-8 col-sm-8">
+                        <ol>
+                          <li>Slides da Profa. Dra. Veronica Oliveira de Carvalho</li>
+                          <li><a href="http://www.miniweb.com.br/historia/Artigos/i_antiga/invencao_papel.html">Invenção do papel</a></li>
+                          <li><a href="http://pplware.sapo.pt/internet/a-historia-do-armazenamento-digital/">História do armazenamento</a></li>
+                        </ol>
+                      </div>
+                      <div class="col-md-2 col-sm-2"></div>
+                    </section>
+                    <!-- /Referências -->
+                    <p class="paper-text hide">O papel (de origem vegetal) é considerado por muitos a primeira forma de armazenamento de informações por
+                      tempo prolongado da humanidade, sua criação é atribuída a um oficial do tribunal chinês, Cao Lun, em 105 A.C.
+                      A primeira fábrica de papel foi instituída em Tsai Lun, China, no mesmo ano. A técnica de produção de papel foi mantido em
+                      segredo pelos chineses, por cerca de 500 anos.
+                      <br/><br/>
+                      Os japoneses conheceram-no no século VII, e já em 770 produziram a primeira publicação - uma oração budista impressa em bloco batido
+                      - técnica do carimbo, do qual editaram cerca de 1.000.000 de exemplares.
+                      A tecnologia para a fabricação do papel chinês, manual e em pequenas folhas, foi conhecida pelos europeus depois que os árabes
+                      venceram os chineses em Samarcanda, 751 da nossa era. Os árabes, que ali aprenderam a confecção do papel começaram a fabricá-lo e
+                      a usá-lo intensivamente, ainda nesse estado de fabricação primitivo. Levaram os segredos da fabricação para a Espanha,
+                      quando os mouros invadiram a península Ibérica no século IX. Depois que os mouros perderam o domínio territorial na Catalunha,
+                      Espanha, o segredo de fabricação disseminou-se pela Europa.
+                      <br/><br/>
+                      A introdução do papel na administração pública árabe iniciou-se sob o reinado do califa Arun Al Rashid - o das Mil e uma Noites -
+                      para evitar falsificações de documentos, porque o pergaminho era mais fácil de ser fabricado que o papel.
+                      O papel começou a ser fabricado fora da jurisdição árabe, japonesa e chinesa, na Itália, em Fabriano, em 1276.
+                      O papel começou a substituir paulatinamente o pergaminho. Na França, a fabricação iniciou-se em 1348, na Alemanha em 1390 e
+                      na Inglaterra, em 1494. Um bom trabalhador não podia fazer mais de 750 folhas por dia. Isso explica o alto valor de todas as peças
+                      literárias da época e seu pouco uso.
+                      <br/><br/>
+                      O processo de fabricação continuou artesanal e moroso até ao séc. XVIII, quando em dezembro de 1798, o francês Louis-Nicolas Robert,
+                      patenteou uma máquina para fazer "papel de grande comprimento" ou "fitas de papel". Robert, ao inventar a máquina capaz de produzir
+                      um papel com 12 a 15 metros de comprimento por cerca de 40 cm de largura, era empregado de um impressor famoso: Didot.
+                      Este comprou-lhe a patente, mas não conseguiu viabilizar inteiramente o invento.
+                      <br/><br/>
+                      O cunhado de Didot, um inglês, roubou-lhe o desenho da máquina e, de regresso à Inglaterra, comercializou o invento.
+                      Dois industriais ingleses, Henry de Fourdriner e seu irmão, aperfeiçoaram o invento transformando-o numa máquina de confecção cilíndrica.
+                      O processo de fabricação foi sendo constantemente aperfeiçoado, sendo que, atualmente, máquinas de papel podem facilmente produzir
+                      mais de 1000 metros de papel por minuto e por processos completamente diferentes que aqueles.
+                      <br/><br/>
+                      A fabricação do papel em rolos contínuos, já numa escala industrial, iniciou a revolução cultural do Ocidente que revolucionou
+                      o mundo e ainda o estamos vivenciando. A invenção dos tablóides na Inglaterra e nos Estados Unidos ocorreu devido à maior facilidade de
+                      produzir papel por volta de 1860, não mais em folhas, mas em rolos enormes. Só a partir da industrialização do processo de
+                      fabricação de papel é que surgiram livros, jornais e revistas, num processo cada vez mais democratizado em que se difundiu desde então,
+                      a cultura generalizada, a ciência, a fé, o terror e a publicidade impressa.</p>
 
-                            </body>
-                            </html>
+                      <p class="perfurado-text hide">
+                        O Cartão perfurado, ou punched card, punch card, IBM card, ou mesmo Hollerith card, foi aproveitado inicialmente por Herman Hollerith,
+                        fundador da Tabulating Machine Company, uma empresa precursora da IBM, para sistemas de informação não têxteis. Estes cartões foram os
+                        grandes precursores da memória usada em computadores.
+                        <br/><br/>
+                        Mas a história destes cartões nasceu antes, os cartões perfurados foram utilizados pela primeira vez por volta de 1725 por Basile Bouchon
+                        e Jean-Baptiste Falcon, num formato mais robusto, em papel perfurado, num rolo, então em uso para controlar teares em França.
+                        Esta técnica foi muito melhorada por Joseph Marie Jacquard no seu tear Jacquard em 1801.
+                        <br/><br/>
+                        Do ano 1900 a 1950, os cartões perfurados foram o principal meio de entrada de dados, armazenamento de dados e processamento na
+                        computação institucional, tudo pela mão da IBM.</p>
+
+                        <p class="tuboWilliams-text hide">O Tubo de Williams é um tipo de memória para computadores criada por Sir Frederick Williams no ano
+                          de 1947 na Universidade inglesa de Manchester.<br/><br/>
+                          Os primeiros computadores utilizavam este tipo de memória de tubos de raios catódicos, díodo-condensador e também as memórias de
+                          linha de retardo. Estas últimas consistiam num tubo de aproximadamente 150 cm de comprimento contendo mercúrio, com um cristal de
+                          quartzo em cada ponta onde os dados a armazenar passavam pelo mercúrio na forma de vibrações mecânicas e eram reconvertidos na outra
+                          ponta.<br/><br/>
+                          Este foi o primeiro dispositivo digital de memória de acesso aleatório e foi utilizado com sucesso em vários computadores antigos.
+                          Este dispositivo tinha uma velocidade de 1,2 milésimos de segundo por instrução.</p>
+
+                          <p class="tamborMemoria-text hide">Conhecida como Drum Memory, foi inventado por Gustav Tauschek em 1932 na Áustria e foi amplamente
+                            usado na década de 1950 e na década de 1960 como a memória do computador. Algumas memórias de bateria também foram usadas ​​como
+                            armazenamento secundário.<br/><br/>
+                            A memória tambor original de Tauschek tinha uma capacidade de cerca de 500.000 bits (62,5 kB). Um dos computadores produzidos em massa,
+                            o IBM 650, tinha cerca de 8,5 kB de memória de tambor, que num modelo depois (número 4) foi duplicada a cerca de 17 kB.</p>
+
+                            <p class="uniservo-text hide">A unidade de fita UNISERVO foi o principal dispositivo de I/O no computador UNIVAC I. O seu lugar ficou
+                              garantido na história pois este dispositivo foi a primeira unidade de fita para um computador vendido comercialmente.<br/><br/>
+
+                              O UNISERVO usava uma fita de metal, com meia polegada de largura (13 mm), feita de uma liga níquel-bronze de fósforo (chamado Vicalloy)
+                              e tinha 1200 metros de comprimento.</p>
+
+                              <p class="ramac-text hide">O IBM 305 RAMAC foi um computador comercial desenvolvido pela IBM em 1956 e foi o primeiro a utilizar uma
+                                unidade de disco magnético com uma cabeça de leitura móvel. O RAMAC é uma sigla que significa Random Access Method of Accounting and
+                                Control ou método de acesso aleatório para contabilidade e controlo.
+                                A unidade de disco poderia armazenar até por volta de 4.4 MB de dados.</p>
+
+                                <p class="ibm3380-text hide">O IBM 3380 Direct Access Storage Device foi introduzido em Junho de 1980. Usava uma nova cabeça de leitura
+                                  e tinha uma capacidade de 2.52 GB, com uma taxa de 3 MB por segundo de transferência de dados. O tempo médio de acesso era de 16 ms.
+                                  Preço de compra no momento da introdução variou de 81.000 dólares 142.200 dólares.<br/><br/>
+                                  Este foi o primeiro dispositivo de armazenamento a atingir o reino do Gigabyte e fica na história por esse feito.</p>
+
+                                  <p class="st506-text hide">O ST-506 foi o primeiro disco rígido de 5″ 1/4. Apresentado em 1980 pela então denominada Shugart Technology
+                                    (hoje Seagate Technology), tinha uma capacidade de 5 MB após formatação. O ST-412 (semelhante, mas muito mais caro) de 10 MB foi
+                                    lançado em fins de 1981. Ambos usavam codificação MFM (já amplamente usada em unidades de disquete). Uma versão posterior do
+                                    ST-412 usava RLL para um incremento de 50% na capacidade e taxa de transferência.<br/><br/>
+
+                                    Esta foi a primeira drive de 5.25″ e foi quem deu origem aos actuais discos rígidos que conhecemos.</p>
+
+                                    <p class="seagate-text hide">Seagate Barracuda é uma série do disco rígido, a maioria dos quais operam a uma velocidade de rotação
+                                      de 7200 RPM. Eles são produzidos pela Seagate Technology. Embora inicialmente fossem comercializados como unidades de alto desempenho
+                                      com interfaces SCSI e capacidades elevadas para o seu tempo, uma vez que apareceram em 2001, tornaram-se no principal produto de mercado
+                                      de massa da Seagate. Com isto a indústria dos discos rígidos começou a colocar estas unidades de 7200 RPM nas unidades de desktop.
+                                      <br/><br/>
+                                      Esta foi a primeira unidade a 7200 RPM tornando-se num standard para a indústria dos discos rígidos e isso marcou a história do
+                                      armazenamento.</p>
+
+                                      <p class="ssd-text hide">SSD (sigla do inglês solid-state drive) ou unidade de estado sólido é um tipo de dispositivo, sem partes móveis,
+                                        para armazenamento não volátil de dados digitais. São, tipicamente, construídos em torno de um circuito integrado semicondutor,
+                                        tipicamente memória NAND Flash, responsável pelo armazenamento, diferindo dos sistemas magnéticos (como os HDs e fitas LTO) ou ópticos
+                                        (discos como CDs e DVDs). Alguns dos dispositivos mais importantes usam memória RAM sob condições especiais.
+                                        <br/><br/>
+                                        Marcam a história por permitirem tempos de arranque impressionantes e armazenamento seguro. São memórias rápidas e consomem menos
+                                        energia. São a evolução lógica do alojamento físico. Também podem ser combinadas com discos mecânicos, havendo assim uma unidade
+                                        híbrida. Um bom exemplo disso é a unidade da Apple, a Fusion Drive.</p>
+
+                                        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+                                        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+                                        <script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+                                        <script type="text/javascript" src="../js/jquery.nav.js"></script>
+                                        <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+                                        <script type="text/javascript" src="../js/jquery.isotope.js"></script>
+                                        <script type="text/javascript" src="../js/wow.js"></script>
+                                        <script type="text/javascript" src="../js/custom.js"></script>
+                                        <script type="text/javascript" src="../js/armazenamento.js"></script>
+
+                                      </body>
+                                      </html>

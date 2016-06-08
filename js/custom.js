@@ -26,6 +26,21 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+
     function resizeText() {
         var preferredWidth = 767;
         var displayWidth = window.innerWidth;
@@ -137,12 +152,13 @@ wow = new WOW({
     animateClass: 'animated',
     offset: 100
 });
+
 wow.init();
-document.getElementById('').onclick = function() {
+/*document.getElementById('').onclick = function() {
     var section = document.createElement('section');
     section.className = 'wow fadeInDown';
     section.className = 'wow shake';
     section.className = 'wow zoomIn';
     section.className = 'wow lightSpeedIn';
     this.parentNode.insertBefore(section, this);
-};
+};*/

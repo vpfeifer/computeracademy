@@ -22,6 +22,10 @@ $(".ordenacao").click(function(){
     window.location.href = "views/ordenacao.html";
 });
 
+$(".index_exemplos").click(function(){
+    window.location.href = "views/index_exemplos.html";
+});
+
 
 $(document).ready(function() {
     $('#header_wrapper').scrollToFixed();

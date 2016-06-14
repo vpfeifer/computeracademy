@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, maximum-scale=1">
+		<title>Computer Academy</title>
+		<link rel="icon" href="../favicon.png" type="image/png">
+		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+		<link href="../css/animate.css" rel="stylesheet" type="text/css">
+	    <link href="../css/indexacao.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+<!--Header_section-->
+<header id="header_wrapper">
+  <div class="container">
+    <div class="header_box">
+      <div class="logo">
+        <span class="logo-title">Ordenação Externa</span>
+      </div>
+	  <nav class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+	    <div id="main-nav" class="collapse navbar-collapse navStyle">
+			<ul class="nav navbar-nav" id="mainNav">
+			  <li><a href="#intro">Intro</a></li>
+			  <li><a href="#geral">Estratégia Geral</a></li>
+			  <li><a href="#IntercalacaoBalanceada">Intercalação Balanceada</a></li>
+			  <li><a href="#selecaoporsubstituicao">Seleção por substituição</a></li>
+			  <li><a href="#QuickSort">QuickSort Externo</a></li>
+			  <li><a href="#bibliografia">Bibliografia</a></li>
+			  <li><a href="../index.html#modulos">Voltar para Academia</a></li>
+			</ul>
+      </div>
+	 </nav>
+    </div>
+  </div>
+</header>
+<!--Header_section-->
+<br/><br/>
+		<!-- Intro -->
+		<section id="intro">
+		  	<div class="container top">
+			
+			  		<div class="col-lg-8 col-md-8 col-sm-12">
+					    
+			    		<p>As estratégias de ordenação externa surgem da necessidade de se ordenar arquivos de tamanho maior que a memória interna disponível.</p>
+			    		<br/>
+			    		<p>Devido a essa necessidade os métodos de ordenação externa diferenciam-se dos de ordenação externa. Como consequencia da menor velocidade de acesso aos arquivos em memória externa os algoritmos de ordenação dever dar ênfase à minimização do número de vez que cada item é transferido entre a memória interna e a memória externa.</p>
+			    		<br/>
+			    		<p>O objetivo desse módulo é mostrar os métodos mais comuns de ordenação externa, bem como as distinções e aplicações dos mesmos.</p>
+						
+			  		</div>
+			  		<div class="col-lg-4 col-md-4 col-sm-12">
+					
+			  			<div class="shape">
+			  				
+							<strong>Sumário</strong>
+			  				<ol>
+			  					<li>Estratégia geral</li>
+			  					<li>Intercalação Baleanceada de vários caminhos</li>
+			  					<li>Implementação através de Seleção por Substituição</li>
+			  					<li>QuickSort Externo</li>
+								<li>Bibliografia</li>
+			  				</ol>
+			  			</div>
+			  		</div>
+			</div>
+			<div class="background"></div>
+		</section>
+		<!--/ Intro -->
+		<br/><br/>
+		<!-- Geral -->
+		
+		<section id="geral">
+			<div class="content">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/><br/>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<h2>Estratégia Geral</h2>
+				</div>
+		
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<p>A estratégia geral dos métodos de <strong>ordenação externa</strong> é a intercalação. 
+					Essa estratégia consiste basicamente de um algoritmo constituido de 3 passos fundamentais.
+					</p>
+					<br/>
+					<b><p>1 - Particionar o arquivo em blocos do tamanho da memória interna disponível</p>
+					<br/>
+					<p>2 - Ordenar os blocos na memória interna.</p>
+					<br/>
+					<p>3 - Intercalar os blocos ordenados, fazendo várias passadas sobre o arquivo.</p></b>
+					<i><p>		* A cada passsada são criados blocos ordenados cada vez maiores, até que o arquivo esteja ordenado por completo.</p></i>
+					
+				</div>
+			</div>
+		</section>
+		<!-- /Geral -->
+		<br/><br/>
+		<!-- IntercalacaoBalanceada -->
+		
+		<section id="IntercalacaoBalanceada">
+			<div class="content">
+			<br/><br/><br/><br/>
+				<div class="col-lg-12 col-md-12 col-sm-12 top">
+					<h2>Intercalação balanceada  de Vários Caminhos</h2>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/><br/><br/><br/>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					
+					<p>Consideremos um arquivo contendo 22 registros armazenado em uma fita magnética.
+					Suponha que a memória interna do computador utilizado, só tenha espaço para 3 registros e o 
+					número de unidades de fita magnética é 6.</p>
+					<br/>
+					<p>	Inicialmente o arquivo é lido de 3 em 3 registros. Cada um desses blocos é ordenado e reescriito 
+					em uma das fitas de saída.</p>
+					<br/>
+					<p> No segundo passo os blocos ordenados são intercalados, o primeiro registro de cada fita é lido para
+					a memória interna, ocupando assim todoo espaço de memória, em seguida o menor desses registros é retirado
+					e o próximo da mesma fita é lido para a memória interna, esses processo se repete até que uma das 3 fitas se esgote.
+					Nesse momento a fita fica inativa até a leitura de todos os registros das outras duas fitas, formando um bloco de 9 registros
+					, que é escrito em uma outra fita. O processo se repete com os próximos blocos de registro de cada fita até a formação de 3 novas ordenadas.
+					Por consequinte as novas fitas repetem os passos anteriores, formando assim um bloco de 27 registros.
+                    <br/>
+				<p>	No nosso caso em se tratando de um arquivo com 22 registros o processo de ordenação já estaria satisfeito, 
+					Porém é necessário ponderar qual o número de passadas necessárias para ordenar um arquivo de tamanho X.
+					Esse número pode ser calculado pensando no número de caminhos utilizados(f), no espaço de memória interna(m) e no tamanho do arquivo(n)
+					e corresponde a <b>log<sub>f</sub>n/m</b>, no exemplo acima <b>log<sub>3</sub>22/3 = 2.</b>
+				</p>
+				<br/><br/>
+				
+				
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+				<strong> Para entender melhor esse tipo de ordenação bem como seu método de implementação na linguagem C
+				    segue um vídeo do canal Linguagem C Programação Descomplicada sobre o assunto.</strong>
+				<div class="embed-responsive embed-responsive-16by9">
+	  				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sVGbj1zgvWQ"></iframe>
+					</div>
+					</div>
+				
+		</section>
+        <!--/IntercalacaoBalanceada -->
+		<!-- SelecaoPorSubstituicao -->
+		
+		<section id="selecaoporsubstituicao">
+		  <div class="content">
+		  <br/><br/><br/><br/>
+				<div class="col-lg-12 col-md-12 col-sm-12 top">
+					<h2>Implementação através de Seleção por Substituição</h2>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<strong>Esse vídeo exemplifica bem o método de implementação de seleção por substituição</strong>
+					<div class="embed-responsive embed-responsive-16by9">
+	  				<iframe class="embed-responsive-item" src="https://www.showme.com/sma/embed/?s=hAW6wme"></iframe>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<p>	A implementação do método de intercalação balanceada pode ser feita utilizando filas de prioridades, o que possibilita um método eficiente e elegante.
+				    A fila de prioridades pode ser utilizada tanto na primeira passada como na fase de intercalação.
+					</p></br>
+					<p><b><font color="red">Na primeira passada</font></b></p>
+					</br>
+					<p><b>1.</b> Pega menor chave na memória (usando heap);</p>
+					<br/>
+					<p><b>2.</b> Lê próximo item do arquivo;</p>
+					<br/>
+					<p><b>3.</b> Se próximo item é menor que o item que está saindo, marca item para próximo bloco;</p>
+					<br/>
+					<p><b>4.</b> Quando item marcado vai para topo da fila de prioridades, bloco corrente é encerrado e novo bloco ordenado é iniciado;</p>
+					<br/>
+					<p><b>5.</b> Ao final, vários blocos ordenados são obtidos</p>
+					</br>
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 top">
+					<p> Posteriormente inicia-se a <b><font color="red">fase de intercalação.</font></b></p>
+					<p> Essa fase inicia-se com blocos em média 2 vezes maiores que o tamanho da memória interna
+					
+					Isso pode economizar uma passada sobre o arquivo. Caso haja alguma ordem nas chaves os blocos ordenados podem ser ainda maiores.</p>
+					
+					<p>Se nenhuma chave tem mais de m chaves maiores que ela, antes delao arquivo é ordenada na primeira passada.
+					Se o numero de fitas é maior ou igual a 8 heap é melhor, pois faz apenas <b>log<sub>2</sub>f</b> comparações</p>
+					
+					
+				</div>
+				
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<br/>
+				</div>
+			</div>
+		</section>
+		  <!-- /SelecaoPorSubstituicao -->
+		
+		 <!-- QuickSort Externo -->
+		 <section id="QuickSort">
+		 <br/><br/><br/>
+				<div class="content">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<h2>QuickSort Externo</h2>
+						<br/>
+						<p>Proposto por Monard em 1980.</p>
+						<p>Utiliza o paradigma de divisão e conquista.</p>
+						<p>Organiza <i><b>in situ</i></b> um arquivo A de n registros.</p><br>
+						<p>Utiliza somente O(log n) unidades de memória interna e nenhuma memória externa adicional</p>
+						<p><li><b>*Algoritmo</b></li></p>
+						<ul><p><li>1. Particionar A</li></p>
+						<ul><p><li>*Utilizando uma área de armazenamento na memória interna  de tamanho maior ou igual a 3 e com valor correspondente a J-I-1, sendo I um valor entre 1 e N.</li>
+						</p></ul></ul>
+						<ul><p><li>2. Chamar recursivamente o algoritmo em cada um dos subarquivos</li></p>
+						<ul><p><li>* Primeiro deve ser ordenado o subarquivo de menor tamanho.</li></p>
+						<ul><p><li>*Condição para que, na média O(log n) subarquivos tenham
+						o processamento adiado.</li></p></ul>
+						<p><li> * Subarquivos vazios ou com um único registro são ignorados.</li></p>
+						<p><li> * Caso o arquivo de entrada A possua no máximo o número de registros
+						de tamanho correspondente à area reservada na memória interna ele é 
+						ordenado em um único passo.</li></ul></ul>
+						</p>
+						<br/>
+						<center><b>A imagem abaixo ilustra o algoritmo</b>
+						<br/>
+						<img src="../img/OrdExt.jpg"></center>
+						
+					</div>
+					
+					</div>
+				
+			</section>
+			<section id="Bibliografia">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+			<br/><br/><br/><h2>Bibliografia</h2>
+			<p><b>Imagens e textos retirados de:</b></p>
+			<p>http://www.decom.ufop.br/guilherme/BCC203/geral/ed2_ordenacao-externa.pdf</p>
+			<p>http://professor.ufabc.edu.br/~leticia.bueno/classes/aed2/materiais/ordenacaoext.pdf</p>
+			<p>http://www2.dcc.ufmg.br/disciplinas/aeds2_turmaA1/cap4.pdf</p>
+			<br/><br/><br/>
+			<p><img src="../img/Externo.png"></p>
+			</div>
+			</section>
+		<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+		<script type="text/javascript" src="../js/jquery.nav.js"></script>
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../js/jquery.isotope.js"></script>
+		<script type="text/javascript" src="../js/wow.js"></script>
+		<script type="text/javascript" src="../js/custom.js"></script>
+	</body>
+</html>

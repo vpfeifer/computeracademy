@@ -90,3 +90,7 @@ a.read-more-armazenamento:hover {
 .code>t{
   color: #f1c40f;
 }
+
+ol{
+  line-height: 50px;
+}

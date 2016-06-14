@@ -1,277 +1,388 @@
-  <!doctype html>
-  <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1">
-    <title>Computer Academy</title>
-    <link rel="icon" href="../favicon.png" type="image/png">
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="../css/animate.css" rel="stylesheet" type="text/css">
-    <link href="../css/armazenamento.css" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
-    <script src="js/respond-1.1.0.min.js"></script>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/html5element.js"></script>
-    <![endif]-->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+  <title>Computer Academy</title>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="../css/animate.css" rel="stylesheet" type="text/css">
+  <link href="../css/armazenamento.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="js/respond-1.1.0.min.js"></script>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/html5element.js"></script>
+  <![endif]-->
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <!--Header_section-->
-    <header id="header_wrapper">
-      <div class="container">
-        <div class="header_box">
-          <div class="logo">
-            <a href="#"><img src="../img/logo.png" alt="logo"></a>
-            <span class="logo-title">Armazenamento</span>
-          </div>
-          <nav class="navbar navbar-inverse" role="navigation">
-            <div class="navbar-header">
-              <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            </div>
-            <div id="main-nav" class="collapse navbar-collapse navStyle">
-              <ul class="nav navbar-nav" id="mainNav">
-                <li class="active"><a href="#intro" class="scroll-link">Intro</a></li>
-                <li><a href="#historico" class="scroll-link">Histórico</a></li>
-                <li><a href="#hd" class="scroll-link">Disco Rígido</a></li>
-                <li><a href="../index.html#modulos">Voltar para Academia</a></li>
-              </ul>
-            </div>
-          </nav>
+  <!--Header_section-->
+  <header id="header_wrapper">
+    <div class="container">
+      <div class="header_box">
+        <div class="logo">
+          <a href="#"><img src="../img/logo.png" alt="logo"></a>
+          <span class="logo-title">Armazenamento</span>
         </div>
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="navbar-header">
+            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div id="main-nav" class="collapse navbar-collapse navStyle">
+            <ul class="nav navbar-nav" id="mainNav">
+              <li class="active"><a href="#intro" class="scroll-link">Intro</a></li>
+              <li><a href="#historico" class="scroll-link">Histórico</a></li>
+              <li><a href="#hd" class="scroll-link">HD</a></li>
+              <li><a href="#conceitos" class="scroll-link">Conceitos</a></li>
+              <li><a href="#fragmentacao" class="scroll-link">Fragmentação</a></li>
+              <li><a href="#arquivos" class="scroll-link">Arquivos</a></li>
+              <li><a href="../index.html#modulos">Voltar</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </header>
-    <!--Header_section-->
+    </div>
+  </header>
+  <!--Header_section-->
 
-    <!-- Intro -->
-    <section id="intro">
-      <div class="container">
-        <div class="hero_section">
-          <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
-            <p>O objetivo deste módulo é apresentar ao leitor o funcionamento do <strong>armazenamento</strong> secundário
-              de um computador, em especial o Disco Rígido (HD - <i>Hard Disk</i>).</p>
+  <!-- Intro -->
+  <section id="intro">
+    <div class="container">
+      <div class="hero_section">
+        <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+          <p>O objetivo deste módulo é apresentar ao leitor o funcionamento do <strong>armazenamento</strong> secundário
+            de um computador, em especial o Disco Rígido (HD - <i>Hard Disk</i>).</p>
+            <br/>
+            <p>Esse conhecimento é importante para o aprendiz de estrutura de dados, pois ao longo do curso ele aprenderá
+              técnicas para aumentar o desempenho de acesso a um arquivo, como indexação por exemplo. E onde estarão armazenados
+              esses arquivos? <strong>Bingo!</strong> Se você pensou em <strong>HD</strong>, acertou em cheio.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 pull-right">
+              <img src="../img/armazenamento/HDDconstruction.jpg" alt="HD"/>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
               <br/>
-              <p>Esse conhecimento é importante para o aprendiz de estrutura de dados, pois ao longo do curso ele aprenderá
-                técnicas para aumentar o desempenho de acesso a um arquivo, como indexação por exemplo. E onde estarão armazenados
-                esses arquivos? <strong>Bingo!</strong> Se você pensou em <strong>HD</strong>, acertou em cheio.</p>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 pull-right">
-                <img src="../img/armazenamento/HDDconstruction.jpg" alt="HD"/>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+              <p>Não se assuste com a imagem, nas próximas seções explicaremos o funcionamento do HD, e para que serve
+                cada um dos componentes presentes na imagem. Esperamos que goste do conteúdo que preparamos para você, então
+                siga em frente e bons estudos!</p>
                 <br/>
-                <p>Não se assuste com a imagem, nas próximas seções explicaremos o funcionamento do HD, e para que serve
-                  cada um dos componentes presentes na imagem. Esperamos que goste do conteúdo que preparamos para você, então
-                  siga em frente e bons estudos!</p>
-                  <br/>
-                  <a href="#historico" class="read-more-armazenamento">Começar agora!</a>
-                </div>
+                <a href="#historico" class="read-more-armazenamento">Começar agora!</a>
               </div>
+            </div>
+          </div>
+        </section>
+        <!-- /Intro -->
+        <br/><br/><br/><br/><br/>
+        <!-- Historico -->
+        <section id="historico">
+          <div class="container historico-top">
+            <div class="modal fade" id="historicoModal" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="historicoModal-content">
+                  <div class="historicoModal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="historicoModal-title">Modal Header</h2>
+                  </div>
+                  <div class="historicoModal-body">
+                    <p>Some text in the modal.</p>
+                  </div>
+                  <div class="historicoModal-footer">
+                    <br/>
+                    <button type="button" class="btn-lg btn-danger pull-right" data-dismiss="modal">Fechar</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <h2>Histórico</h2>
+            <div class="col-md-12 col-sm-12">
+              <p>O armazenamento secundário foi projetado para armazenar dados por períodos de tempo prolongados.
+                As imagens a seguir apresentam os principais marcos históricos do desenvolvimento dessa tecnologia.
+                Clique nas imagens para ver mais detalhes de cada um desses marcos.</p>
+                <br/>
+              </div>
+              <!-- Modulos Wrapper -->
+              <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
+
+                <!-- Modulos Item -->
+                <div id="paper-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/papel.png"  alt="Papel"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">Papel</h4>
+                    </div>
+                  </div>
+                </div>
+                <!--/Modulos Item -->
+
+                <!-- Modulos Item-->
+                <div id="perfurado-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/perfurado.jpg" alt="Cartão Perfurado"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">Cartão Perfurado</h4>
+                    </div>
+                  </div>
+                </div>
+                <!--/Modulos Item -->
+
+                <!-- Modulos Item -->
+                <div id="tuboWilliams-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/tuboWilliams.jpg" alt="Tubo de Williams"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">Tubo de Williams</h4>
+                    </div>
+                  </div>
+                </div>
+                <!--/Modulos Item-->
+
+                <!-- Modulos Item-->
+                <div id="tamborMemoria-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  prototype web isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/tamborMemoria.jpg" alt="Tambor de Memória"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">Tambor de Memória</h4>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modulos Item -->
+
+                <!-- Modulos Item -->
+                <div id="uniservo-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/uniservo.jpg" alt="Uniservo"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">Uniservo</h4>
+                    </div>
+                  </div>
+                </div>
+                <!--/Modulos Item -->
+
+                <!-- Portfolio Item -->
+                <div id="ramac-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/ramac.jpg" alt="Ramac"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">IBM 350 RAMAC</h4>
+                    </div>
+                  </div>
+                </div>
+                <!--/Portfolio Item -->
+
+                <!-- Portfolio Item  -->
+                <div id="ibm3380-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/ibm3380.jpg" alt="IBM 3380"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">IBM 3380</h4>
+                    </div>
+                  </div>
+                </div>
+                <!--/Portfolio Item -->
+
+                <!-- Portfolio Item -->
+                <div id="st506-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/st506.jpg" alt="ST-506"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">ST-506</h4>
+                    </div>
+                  </div>
+                </a> </div>
+                <!--/Portfolio Item -->
+
+                <!-- Portfolio Item -->
+                <div id="seagate-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/seagateBarracuda.jpg" alt="Seagate Barracuda"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">Seagate Barracuda</h4>
+                    </div>
+                  </div>
+                </a> </div>
+                <!--/Portfolio Item -->
+
+                <!-- Portfolio Item -->
+                <div id="ssd-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
+                  <div class="portfolio_img"> <img src="../img/armazenamento/ssd.jpg" alt="Solid-State Drive"> </div>
+                  <div class="item_overlay">
+                    <div class="item_info">
+                      <h4 class="project_name">SSD</h4>
+                    </div>
+                  </div>
+                </a> </div>
+                <!--/Portfolio Item -->
+
+              </div>
+              <!--/Portfolio Wrapper -->
             </div>
           </section>
-          <!-- /Intro -->
-          <br/><br/><br/><br/><br/>
-          <!-- Historico -->
-          <section id="historico">
-            <div class="container historico-top">
-              <div class="modal fade" id="historicoModal" role="dialog">
-                <div class="modal-dialog modal-lg">
-                  <!-- Modal content-->
-                  <div class="historicoModal-content">
-                    <div class="historicoModal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h2 class="historicoModal-title">Modal Header</h2>
-                    </div>
-                    <div class="historicoModal-body">
-                      <p>Some text in the modal.</p>
-                    </div>
-                    <div class="historicoModal-footer">
+          <!-- /Historico -->
+
+          <!-- HD -->
+          <section id="hd">
+            <div class="container">
+              <h2>Disco Rígido</h2>
+              <div class="col-md-8 col-sm-12">
+                <p>O disco rígido é um conjunto de <strong>pratos</strong> empilhados, os dados são gravados na superficíes desses pratos.
+                  Eles estão representados em nos círculos azuis da figura ao lado. As superficíes são organizadas em
+                  <strong>trilhas</strong> e as trilhas são organizadas em setores. Um <strong>Cilindro</strong> é um conjunto de trilhas
+                  na mesm posição em cada um dos pratos. O <stron>Setor</strong> é a menor unidade de endereçamento do disco rígido.
+                    A figura ao lado apresenta de forma visual a descrição anterior.</p>
+                    <br/><br/>
+                    <p>E por que é importante entendermos como funciona o disco rígido? Simples, porque mais de 90% dos computadores pessoais
+                      utilizam essa tecnologia, e especificamente para os programadores, porque por vezes precisamos trabalhar com arquivos
+                      em nossos sistemas, e como dissemos anteriormente, eles ficam armazenados no HD (<i>Hard Disk</i>). Para entermos melhor
+                      o impacto para os programadores, veja o exemplo de leitura de um arquivo em C a seguir.</p>
                       <br/>
-                      <button type="button" class="btn-lg btn-danger pull-right" data-dismiss="modal">Fechar</button>
                     </div>
-                  </div>
-
-                </div>
-              </div>
-              <h2>Histórico</h2>
-              <div class="col-md-12 col-sm-12">
-                <p>O armazenamento secundário foi projetado para armazenar dados por períodos de tempo prolongados.
-                  As imagens a seguir apresentam os principais marcos históricos do desenvolvimento dessa tecnologia.
-                  Clique nas imagens para ver mais detalhes de cada um desses marcos.</p>
-                  <br/>
-                </div>
-                <!-- Modulos Wrapper -->
-                <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
-
-                  <!-- Modulos Item -->
-                  <div id="paper-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/papel.png"  alt="Papel"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">Papel</h4>
+                    <div class="col-md-4 col-sm-12">
+                      <img src="../img/armazenamento/hd.jpg"/>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="code">
+                        <i>//Lê 1 byte do arquivo na posição corrente do cursor no arquivo</i><br/>
+                        <b>fread</b>(&c, <t>1</t>, <t>1</t>, fd);
                       </div>
                     </div>
-                  </div>
-                  <!--/Modulos Item -->
-
-                  <!-- Modulos Item-->
-                  <div id="perfurado-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/perfurado.jpg" alt="Cartão Perfurado"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">Cartão Perfurado</h4>
+                    <div class="col-md-6 col-sm-12">
+                      <p>No código ao lado utilizamos o comando <strong>fread</strong> da linguagem C para ler 1 <i>byte</i> de um descritor de arquivos
+                        <strong>fd</strong> na variável c. Para realizar essa operação, o sistema operacional determina qual a superficíe, trilha
+                        e setor em que se encontra esse <i>byte</i>, carrega o conteúdo desse setor para uma memória especial do computador chamada de
+                        <b><i>buffer</i></b> de entrada e saída. Por fim, o <b><i>byte</i></b> desejado é lido do <i>buffer</i> para a memória RAM. Se o setor
+                        já estiver no <i>buffer</i>, o acesso ao disco rígido não é necessário. Acesse o módulo de Fundamentos de Arquivos para entender melhor
+                        como trabalhar com arquivos em C.</p>
                       </div>
                     </div>
-                  </div>
-                  <!--/Modulos Item -->
-
-                  <!-- Modulos Item -->
-                  <div id="tuboWilliams-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/tuboWilliams.jpg" alt="Tubo de Williams"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">Tubo de Williams</h4>
+                  </section>
+                  <!-- /HD -->
+                  <br/><br/><br/><br/><br/>
+                  <!-- Conceitos -->
+                    <section id="conceitos">
+                      <div class="container">
+                        <h2>Conceitos</h2>
+                        <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                          <h2>Seeking</h2>
+                          <p><strong>Seeking</strong> é o movimento para posicionar a cabeça de leitura e escrita sobre a trilha
+                          ou setor desejado. Todo o conteúdo de um cilindro pode ser lido com um único <strong>seek</strong>.
+                          Esse é o movimento mais lento da operação de leitura e escrita e deve ser reduzido ao máximo.</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                          <h2>Cluster</h2>
+                          <p>Um <strong>Cluster</strong> é um conjunto de setores logicamente contíguos no disco. O sistema
+                          operacional enxerga um arquivo como um grupo de clusters no disco, ou seja, os arquivos são alocados
+                          em um ou mais clusters</p>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <!--/Modulos Item-->
-
-                  <!-- Modulos Item-->
-                  <div id="tamborMemoria-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  prototype web isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/tamborMemoria.jpg" alt="Tambor de Memória"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">Tambor de Memória</h4>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                          <h2>Extent</h2>
+                          <p><strong>Extent</strong> é uma sequência de clusters consecutivos no disco. Um único <strong>seek</strong>
+                          consegue recuperar um extent. A sistuação ideal para buscar um arquivo no disco é quando um arquivo ocupa
+                          apenas um extent, porém frequentemente isso não é possível e o arquivo acaba ficando espalhado em vários
+                          extents pelo disco.</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 pull-right">
+                          <h2>Capacidade do disco</h2>
+                          <ol>
+                            <li><strong>Capacidade do setor</strong> : n bytes, por exemplo, 512 bytes.</li>
+                            <li><strong>Capacidade da trilha</strong> : n setores por trilha * capacidade do setor.</li>
+                            <li><strong>Capacidade do cilindro</strong> : n trilhas por cilindro * capacidade da trilha.</li>
+                            <li><strong>Capacidade do disco</strong> : n cilindros no disco * capacidade do cilindro.</li>
+                          </ol>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <!-- Modulos Item -->
-
-                  <!-- Modulos Item -->
-                  <div id="uniservo-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/uniservo.jpg" alt="Uniservo"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">Uniservo</h4>
                       </div>
-                    </div>
-                  </div>
-                  <!--/Modulos Item -->
-
-                  <!-- Portfolio Item -->
-                  <div id="ramac-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/ramac.jpg" alt="Ramac"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">IBM 350 RAMAC</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <!--/Portfolio Item -->
-
-                  <!-- Portfolio Item  -->
-                  <div id="ibm3380-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/ibm3380.jpg" alt="IBM 3380"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">IBM 3380</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <!--/Portfolio Item -->
-
-                  <!-- Portfolio Item -->
-                  <div id="st506-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/st506.jpg" alt="ST-506"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">ST-506</h4>
-                      </div>
-                    </div>
-                  </a> </div>
-                  <!--/Portfolio Item -->
-
-                  <!-- Portfolio Item -->
-                  <div id="seagate-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/seagateBarracuda.jpg" alt="Seagate Barracuda"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">Seagate Barracuda</h4>
-                      </div>
-                    </div>
-                  </a> </div>
-                  <!--/Portfolio Item -->
-
-                  <!-- Portfolio Item -->
-                  <div id="ssd-item" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four isotope-item">
-                    <div class="portfolio_img"> <img src="../img/armazenamento/ssd.jpg" alt="Solid-State Drive"> </div>
-                    <div class="item_overlay">
-                      <div class="item_info">
-                        <h4 class="project_name">SSD</h4>
-                      </div>
-                    </div>
-                  </a> </div>
-                  <!--/Portfolio Item -->
-
-                </div>
-                <!--/Portfolio Wrapper -->
-              </div>
-            </section>
-            <!-- /Historico -->
-
-            <!-- HD -->
-            <section id="hd">
-              <div class="container">
-                <h2>Disco Rígido</h2>
-                <div class="col-md-8 col-sm-12">
-                  <p>O disco rígido é um conjunto de <strong>pratos</strong> empilhados, os dados são gravados na superficíes desses pratos.
-                    Eles estão representados em nos círculos azuis da figura ao lado. As superficíes são organizadas em
-                    <strong>trilhas</strong> e as trilhas são organizadas em setores. Um <strong>Cilindro</strong> é um conjunto de trilhas
-                    na mesm posição em cada um dos pratos. O <stron>Setor</strong> é a menor unidade de endereçamento do disco rígido.
-                      A figura ao lado apresenta de forma visual a descrição anterior.</p>
-                      <br/><br/>
-                      <p>E por que é importante entendermos como funciona o disco rígido? Simples, porque mais de 90% dos computadores pessoais
-                        utilizam essa tecnologia, e especificamente para os programadores, porque por vezes precisamos trabalhar com arquivos
-                        em nossos sistemas, e como dissemos anteriormente, eles ficam armazenados no HD (<i>Hard Disk</i>). Para entermos melhor
-                        o impacto para os programadores, veja o exemplo de leitura de um arquivo em C a seguir.</p>
+                    </section>
+                  <!-- /Conceitos -->
+                  <br/><br/><br/><br/>
+                  <!-- Fragmentação -->
+                  <section id="fragmentacao">
+                    <div class="container">
+                      <h2>Fragmentação</h2>
+                      <div class="col-md-7 col-sm-12">
+                        <p>Quando utilizamos o computador, criamos arquivos e esses arquivos são armazenados no disco rígido
+                        como vimos anteriormente correto? E você já parou para pensar no que acontece quando queremos salvar
+                        um arquivo que é maior que um setor, porém a primeira área livre do disco não tem a quantidade
+                        de setores necessária para armazená-la? O que você acha que acontece?</p>
+                        <br/><br/>
+                        <p>a. O sistema operacional procura a próxima área livre que tenha a quantidade de setores suficientes</p>
                         <br/>
+                        <p>b. O sistema operacional espalha o arquivo pelo disco nos setores livres </p>
+                        <br/>
+                        <p>c. O sistema operacional salva empurra os setores que faltam para frente e assim é possível salvar
+                        o arquivo</p>
+                        <br/>
+                        <p>d. Nenhuma das anteriores</p>
+                        <br/><br/>
                       </div>
-                      <div class="col-md-4 col-sm-12">
-                        <img src="../img/armazenamento/hd.jpg"/>
+                      <div class="col-md-5 col-sm-12">
+                        <img src="../img/armazenamento/fragmentado.jpg"/>
                       </div>
-                      <div class="col-md-6 col-sm-12">
-                        <div class="code">
-                          <i>//Lê 1 byte do arquivo na posição corrente do cursor no arquivo</i><br/>
-                          <b>fread</b>(&c, <t>1</t>, <t>1</t>, fd);
+                      <div class="col-md-12 col-sm-12">
+                        <p>Se você escolheu a opção b, acertou! O arquivo é espalhado pelo disco e uma parte dele é salva em cada
+                          setor livre. Esse processo de espalhamento de arquivos pelo disco é conhecido como <strong>fragmentação</strong>.
+                          A imagem ao lado representa um disco fragmentado, onde cada cor é um arquivo.</p>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- /Fragamentação -->
+                  <br/><br/><br/><br/>
+                  <!-- Sistema de Arquivos -->
+                    <section id="arquivos">
+                      <div class="container">
+                        <h2>Sistema de Arquivos</h2>
+                        <div class="col-md-12 col-sm-12">
+                          <p>A organização do disco em setores, trilhas e cilindros é uma formatação <strong>física</strong>
+                          do disco rígido. Além dessa formatação, é necessário uma formatação lógica, responsável por
+                          instalar o sistema de arquivos no disco, transformando o disco em regiões endereçáveis.</p>
                         </div>
-                      </div>
-                      <div class="col-md-6 col-sm-12">
-                        <p>No código ao lado utilizamos o comando <strong>fread</strong> da linguagem C para ler 1 <i>byte</i> de um descritor de arquivos
-                          <strong>fd</strong> na variável c. Para realizar essa operação, o sistema operacional determina qual a superficíe, trilha
-                          e setor em que se encontra esse <i>byte</i>, carrega o conteúdo desse setor para uma memória especial do computador chamada de
-                          <b><i>buffer</i></b> de entrada e saída. Por fim, o <b><i>byte</i></b> desejado é lido do <i>buffer</i> para a memória RAM. Se o setor
-                          já estiver no <i>buffer</i>, o acesso ao disco rígido não é necessário.</p>
+                        <div class="col-md-5 col-sm-12">
+                          <img src="../img/armazenamento/fat.jpg"/>
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                          <br/><br/>
+                          <p>O <strong>FAT</strong>(<i>File Allocation Table</i>) é o sistema de arquivos utilizado no Windows.
+                          Esse sistema de arquivos não endereça setores, mas sim clusters, ou seja, um cluster é sua unidade
+                          mínima de alocação. Cada entrada da tabela de alocação corresponde a localização física de um cluster
+                          associado a um arquivo lógico. Com apenas um seek todos os setores de um cluster são lidos.</p>
+                          <br/><br/>
+                          <p>Quando um program necessista acessar um dado no disco, a responsabilidade de determinar em qual
+                          cluster esse dado se encontra é do sistema de arquivos, no nosso caso o <strong>FAT</strong>. O
+                          tamanho do cluster é determinado pelo sistema operacional quando o disco é formatado, quanto maior
+                          o tamanho do cluster, maior será a fragmentação no disco.</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                          <p>O tempo de acesso ao disco é uma combinação de três fatores : o tempo de busca (<i>seek</i>),
+                          tempo de rotação para cabeça de leitura e escrita e o tempo de transferência dos bytes. Além dos
+                          fatores físicos citados, também influenciam no tempo de acesso a distribuição do arquivo no disco
+                          e o modo de acesso (aleatório ou sequencial).</p>
+                          <br/><br/><br/><br/><br/><br/>
                         </div>
                       </div>
                     </section>
-                    <!-- /HD -->
-                    <br/><br/><br/><br/><br/>
-                    <!-- Referências -->
-                    <section id="referencias">
-                      <h2>Referências</h2>
-                      <div class="col-md-2 col-sm-2"></div>
-                      <div class="col-md-8 col-sm-8">
-                        <ol>
-                          <li>Slides da Profa. Dra. Veronica Oliveira de Carvalho</li>
-                          <li><a href="http://www.miniweb.com.br/historia/Artigos/i_antiga/invencao_papel.html">Invenção do papel</a></li>
-                          <li><a href="http://pplware.sapo.pt/internet/a-historia-do-armazenamento-digital/">História do armazenamento</a></li>
-                        </ol>
-                      </div>
-                      <div class="col-md-2 col-sm-2"></div>
-                    </section>
-                    <!-- /Referências -->
+                  <!-- /Sistema de Arquivos -->
+                  <!-- Referências -->
+                  <section id="referencias">
+                    <h2>Referências</h2>
+                    <div class="col-md-2 col-sm-2"></div>
+                    <div class="col-md-8 col-sm-8">
+                      <ol>
+                        <li>Slides da Profa. Dra. Veronica Oliveira de Carvalho, UNESP Rio Claro.</li>
+                        <li><a href="http://www.miniweb.com.br/historia/Artigos/i_antiga/invencao_papel.html">Invenção do papel</a></li>
+                        <li><a href="http://pplware.sapo.pt/internet/a-historia-do-armazenamento-digital/">História do armazenamento</a></li>
+                      </ol>
+                    </div>
+                    <div class="col-md-2 col-sm-2"></div>
+                  </section>
+                  <!-- /Referências -->
+                  <div class="texts hide">
                     <p class="paper-text hide">O papel (de origem vegetal) é considerado por muitos a primeira forma de armazenamento de informações por
                       tempo prolongado da humanidade, sua criação é atribuída a um oficial do tribunal chinês, Cao Lun, em 105 A.C.
                       A primeira fábrica de papel foi instituída em Tsai Lun, China, no mesmo ano. A técnica de produção de papel foi mantido em
@@ -374,16 +485,16 @@
                                         Marcam a história por permitirem tempos de arranque impressionantes e armazenamento seguro. São memórias rápidas e consomem menos
                                         energia. São a evolução lógica do alojamento físico. Também podem ser combinadas com discos mecânicos, havendo assim uma unidade
                                         híbrida. Um bom exemplo disso é a unidade da Apple, a Fusion Drive.</p>
+                                      </div>
+                                      <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+                                      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+                                      <script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+                                      <script type="text/javascript" src="../js/jquery.nav.js"></script>
+                                      <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+                                      <script type="text/javascript" src="../js/jquery.isotope.js"></script>
+                                      <script type="text/javascript" src="../js/wow.js"></script>
+                                      <script type="text/javascript" src="../js/custom.js"></script>
+                                      <script type="text/javascript" src="../js/armazenamento.js"></script>
 
-                                        <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
-                                        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-                                        <script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
-                                        <script type="text/javascript" src="../js/jquery.nav.js"></script>
-                                        <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
-                                        <script type="text/javascript" src="../js/jquery.isotope.js"></script>
-                                        <script type="text/javascript" src="../js/wow.js"></script>
-                                        <script type="text/javascript" src="../js/custom.js"></script>
-                                        <script type="text/javascript" src="../js/armazenamento.js"></script>
-
-                                      </body>
-                                      </html>
+                                    </body>
+                                    </html>

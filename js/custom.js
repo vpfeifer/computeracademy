@@ -18,6 +18,11 @@ $(".armazenamento").click(function(){
     window.location.href = "views/armazenamento.html";
 });
 
+$(".ordenacao").click(function(){
+    window.location.href = "views/ordenacao.html";
+});
+
+
 $(document).ready(function() {
     $('#header_wrapper').scrollToFixed();
     $('.res-nav_click').click(function() {

@@ -26,6 +26,10 @@ $(".index_exemplos").click(function(){
     window.location.href = "views/index_exemplos.html";
 });
 
+$(".processamento").click(function(){
+    window.location.href = "views/processamentoCosequencial.html";
+});
+
 
 $(document).ready(function() {
     $('#header_wrapper').scrollToFixed();

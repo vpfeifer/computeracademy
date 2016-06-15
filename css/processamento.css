@@ -1,0 +1,97 @@
+#header_wrapper{
+  background: #A8CD1B;
+}
+
+p{
+  font-family: Open Sans
+  font-size : 16px;
+  color: #333;
+}
+
+strong {
+  font-size: 18px;
+}
+
+a.read-more-processamento {
+  font-family: 'Raleway', sans-serif;
+  display: block;
+  font-size: 16px;
+  width: 178px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  background: #A8CD1B;
+  color: #333;
+  border: 1px solid #aaa;
+}
+
+a.read-more-processamento:hover {
+  background: #CBE32D;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.hero_section{
+  padding-top: 80px;
+}
+
+.item_overlay:hover {
+  background: rgba(211, 211, 211, 0.7);
+}
+
+.project_name{
+  color: #444;
+  font-weight: bold;
+}
+
+.historico-top{
+  padding: 50px;
+}
+
+.historicoModal-content h2, .close{
+  color : #fff;
+}
+
+.historicoModal-body{
+  text-align: justify;
+  color: #ccc;
+}
+
+.modal-backdrop.in{
+  opacity: .90;
+}
+
+ol{
+  line-height: 35px;
+}
+
+.shape{
+	border: 5px solid #555;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	color: #555;
+	font-size: 14px;
+	line-height: 30px;
+  width: 100px;
+  float: left;
+  padding: 12px;
+  margin: 10px;
+}
+
+.seta {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 20px;
+}

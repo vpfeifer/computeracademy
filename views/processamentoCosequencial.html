@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+  <title>Computer Academy</title>
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../css/font-awesome.css" rel="stylesheet" type="text/css">
+  <link href="../css/animate.css" rel="stylesheet" type="text/css">
+  <link href="../css/processamento.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="js/respond-1.1.0.min.js"></script>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/html5element.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <!--Header_section-->
+  <header id="header_wrapper">
+    <div class="container">
+      <div class="header_box">
+        <div class="logo">
+          <a href="#"><img src="../img/logo.png" alt="logo"></a>
+          <span class="logo-title">Processamento Cosequencial</span>
+        </div>
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="navbar-header">
+            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div id="main-nav" class="collapse navbar-collapse navStyle">
+            <ul class="nav navbar-nav" id="mainNav">
+              <li class="active"><a href="#intro" class="scroll-link">Intro</a></li>
+              <li><a href="#matching" class="scroll-link">Matching</a></li>
+              <li><a href="#merging" class="scroll-link">Merging</a></li>
+              <li><a href="../index.html#modulos">Voltar</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--Header_section-->
+
+  <!-- Intro -->
+  <section id="intro">
+    <div class="container">
+      <div class="hero_section">
+        <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+          <p>O <strong>Processamento Cosequencial</strong> consiste de operações que envolvem o processamento coordenado de duas ou mais
+          listas de entrada sequenciais, de modo a produzir uma única lista como saída. Esse tipo de operação é muito comum em arquivos.</p>
+          <br/>
+          <p>O objetivo desse módulo é introduzir um modelo genérico a partir do qual operações que envolvem combinações de dois
+            ou mais arquivos de entrada possam ser implementadas. </p>
+          <br/>
+          <p>Apesar de serem conceitualmente simples, operações que envolvem processamento cosequencial são, muitas vezes,
+              implementadas de forma confusa e mal organizada.</p>
+          <br/>
+          <p>Inicialmente, será apresentado um modelo genérico para a construção de procedimentos cosequenciais simples, curtos e robustos.</p>
+          <br/>
+          <p>Exemplos de processamento cosequencial são o <strong><i>Merging</i></strong> e o <strong><i>Matching</i></strong>, o primeiro
+            é base do processo de ordenação de arquivos muito grandes, cujo índice não cabe na memória.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 pull-right">
+            <img src="../img/processamento/intro.jpg" alt="pc"/>
+        </div>
+      </div>
+    </div>
+  </section>
+        <!-- /Intro -->
+  <br/><br/><br/><br/>
+  <!-- Matching -->
+  <section id="matching">
+    <div class="container">
+      <h2>Matching</h2>
+      <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="shape">
+          Evento A<br/>
+          A<br/>
+          B<br/>
+          C
+        </div>
+        <div class="shape">
+          Evento B<br/>
+          B<br/>
+          D<br/>
+          E
+        </div>
+        <div class="seta"></div>
+        <div class="shape" style="float:right;margin-right:100px">
+          Resultado<br/>
+          B<br/>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <p>O objetivo desse algoritmo é produzir uma lista itens comuns das listas de entradas. Como exemplo, vamos
+        imaginar que temos 2 arquivos que representam listas de convidados para um evento e que desejamos produzir
+        um novo arquivo com os nomes presentes nas duas listas, considerando que as listas de entrada não contém nomes
+        repetidos e estão na ordem crescente.</p>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <br/>
+        <p>O algoritmo é basicamento o seguinte :</p><br/>
+        <ol>
+          <li>Ler um nome de cada lista e os comparar</li>
+          <li>Se ambos são iguais, copiar o nome para saída e avançar para o próximo nome nas duas listas.</li>
+          <li>Se o nome da lista 1 é menor, avança na lista 1.</li>
+          <li>Se o nome da lista 2 é menor, avança na lista 2.</li>
+        </ol>
+        <br/>
+        <p>Ao lado podemos ver o pseudo-código do algortimo.</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="code">
+          <b>get</b> NAME_1 <b>from</b> LIST_1<br/>
+          <b>get</b> NAME_2 <b>from</b> LIST_2<br/>
+          <b>while</b>(MORE_NAMES_EXIST)<br/>
+            &nbsp;<b>if</b> (NAME_1 <t><</t> NAME_2)<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_1 <b>from</b> LIST_1<br/>
+            &nbsp;<b>else if</b> (NAME_1 <t>></t> NAME_2)<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_2 <b>from</b> LIST_2<br/>
+            &nbsp;<b>else</b> <i>/* match – names are the same */</i><br/>
+              &nbsp;&nbsp;<b>write</b> NAME_1 to OUT_FILE<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_1 <b>from</b> LIST_1<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_2 <b>from</b> LIST_2<br/>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Matching -->
+  <br/><br/><br/><br/>
+  <!-- Merging -->
+  <section id="merging">
+    <div class="container">
+      <h2>Merging</h2>
+      <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <p>O objetivo desse algoritmo é produzir uma lista unindo os itens das listas de entrada. Como exemplo, vamos
+        imaginar que temos 2 arquivos que representam listas de convidados para um evento e que desejamos produzir
+        um novo arquivo com os nomes presentes nas listas, considerando que as listas de entrada não contém nomes
+        repetidos e estão na ordem crescente.</p>
+        </p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="shape">
+          Evento A<br/>
+          A<br/>
+          B<br/>
+          C
+        </div>
+        <div class="shape">
+          Evento B<br/>
+          B<br/>
+          D<br/>
+          E
+        </div>
+        <div class="seta"></div>
+        <div class="shape" style="float:right;margin-right:100px">
+          Resultado<br/>
+          A<br/>
+          B<br/>
+          C<br/>
+          D<br/>
+          E
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="code">
+          <b>get</b> NAME_1 <b>from</b> LIST_1<br/>
+          <b>get</b> NAME_2 <b>from</b> LIST_2<br/>
+          <b>while</b>(MORE_NAMES_EXIST)<br/>
+            &nbsp;<b>if</b> (NAME_1 <t><</t> NAME_2)<br/>
+              &nbsp;&nbsp;<b>write</b> NAME_1 <b>to</b> OUT_FILE<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_1 <b>from</b> LIST_1<br/>
+            &nbsp;<b>else if</b> (NAME_1 <t>></t> NAME_2)<br/>
+              &nbsp;&nbsp;<b>write</b> NAME_2 <b>to</b> OUT_FILE<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_2 <b>from</b> LIST_2<br/>
+            &nbsp;<b>else</b> <i>/* match – names are the same */</i><br/>
+              &nbsp;&nbsp;<b>write</b> NAME_1 to OUT_FILE<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_1 <b>from</b> LIST_1<br/>
+              &nbsp;&nbsp;<b>get</b> NAME_2 <b>from</b> LIST_2<br/>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <br/>
+        <p>O algoritmo é basicamento o seguinte :</p><br/>
+        <ol>
+          <li>Ler um nome de cada lista e os comparar</li>
+          <li>Se ambos são iguais, copiar o nome para saída e avançar para o próximo nome nas duas listas.</li>
+          <li>Se o nome da lista 1 é menor, copia o nome para saída e avança na lista 1.</li>
+          <li>Se o nome da lista 2 é menor, copia o nome para saída e avança na lista 2.</li>
+        </ol>
+        <br/>
+        <p>Ao lado podemos ver o pseudo-código do algortimo.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Merging -->
+  <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-scrolltofixed.js"></script>
+  <script type="text/javascript" src="../js/jquery.nav.js"></script>
+  <script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="../js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="../js/wow.js"></script>
+  <script type="text/javascript" src="../js/custom.js"></script>
+</body>
+</html>
